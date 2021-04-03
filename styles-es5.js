@@ -11,11 +11,11 @@
     /***/
     function _(module, exports, __webpack_require__) {
       __webpack_require__(
-      /*! /home/runner/work/optc-pirate-rumble-db/optc-pirate-rumble-db/optc-pirate-rumble-db/node_modules/@angular/material/prebuilt-themes/purple-green.css */
+      /*! C:\source\repos\games\optc-pirate-rumble-db\node_modules\@angular\material\prebuilt-themes\purple-green.css */
       "af/a");
 
       module.exports = __webpack_require__(
-      /*! /home/runner/work/optc-pirate-rumble-db/optc-pirate-rumble-db/optc-pirate-rumble-db/src/styles.css */
+      /*! C:\source\repos\games\optc-pirate-rumble-db\src\styles.css */
       "OmL/");
       /***/
     },
@@ -515,12 +515,12 @@
       var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true); // Module
 
 
-      ___CSS_LOADER_EXPORT___.push([module.i, "/* You can add global styles to this file, and also import other style files */\n\n/* Orb colors */\n\n.STR   { background: salmon; }\n\n.QCK   { background: lightskyblue; }\n\n.DEX   { background: lightgreen; }\n\n.PSY   { background: gold; }\n\n.INT   { background: orchid; }\n\n.RCV   { background: darkgoldenrod; }\n\n.TND   { background: peru; }\n\n.BLOCK { background: darkslateblue; }\n\n.BOMB  { background: maroon; }\n\n.WANO  { background: firebrick; }\n\n.SEMLA  { background: saddlebrown; }\n\n.RAINBOW { background: linear-gradient(90deg,#fa8072,#ffd700,#90ee90,#87cefa, #da70d6); }\n\n.SUPERBOMB { background: linear-gradient(90deg, #ff2600, #debb2f, #ff2600); }\n\n.G     { background: orange; }\n\n.EMPTY { background: #777; }\n\nhtml, body { height: 100%; }\n\nbody { margin: 0; font-family: Roboto, \"Helvetica Neue\", sans-serif; background-color: #212121 }\n", "", {
+      ___CSS_LOADER_EXPORT___.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n\r\n/* Orb colors */\r\n\r\n.STR   { background: salmon; }\r\n\r\n.QCK   { background: lightskyblue; }\r\n\r\n.DEX   { background: lightgreen; }\r\n\r\n.PSY   { background: gold; }\r\n\r\n.INT   { background: orchid; }\r\n\r\n.RCV   { background: darkgoldenrod; }\r\n\r\n.TND   { background: peru; }\r\n\r\n.BLOCK { background: darkslateblue; }\r\n\r\n.BOMB  { background: maroon; }\r\n\r\n.WANO  { background: firebrick; }\r\n\r\n.SEMLA  { background: saddlebrown; }\r\n\r\n.RAINBOW { background: linear-gradient(90deg,#fa8072,#ffd700,#90ee90,#87cefa, #da70d6); }\r\n\r\n.SUPERBOMB { background: linear-gradient(90deg, #ff2600, #debb2f, #ff2600); }\r\n\r\n.G     { background: orange; }\r\n\r\n.EMPTY { background: #777; }\r\n\r\nhtml, body { height: 100%; }\r\n\r\nbody { margin: 0; font-family: Roboto, \"Helvetica Neue\", sans-serif; background-color: #212121 }\r\n", "", {
         "version": 3,
         "sources": ["webpack://src/styles.css"],
         "names": [],
         "mappings": "AAAA,8EAA8E;;AAE9E,eAAe;;AACf,SAAS,kBAAkB,EAAE;;AAC7B,SAAS,wBAAwB,EAAE;;AACnC,SAAS,sBAAsB,EAAE;;AACjC,SAAS,gBAAgB,EAAE;;AAC3B,SAAS,kBAAkB,EAAE;;AAC7B,SAAS,yBAAyB,EAAE;;AACpC,SAAS,gBAAgB,EAAE;;AAC3B,SAAS,yBAAyB,EAAE;;AACpC,SAAS,kBAAkB,EAAE;;AAC7B,SAAS,qBAAqB,EAAE;;AAChC,UAAU,uBAAuB,EAAE;;AACnC,WAAW,2EAA2E,EAAE;;AACxF,aAAa,6DAA6D,EAAE;;AAC5E,SAAS,kBAAkB,EAAE;;AAC7B,SAAS,gBAAgB,EAAE;;AAE3B,aAAa,YAAY,EAAE;;AAC3B,OAAO,SAAS,EAAE,iDAAiD,EAAE,0BAA0B",
-        "sourcesContent": ["/* You can add global styles to this file, and also import other style files */\n\n/* Orb colors */\n.STR   { background: salmon; }\n.QCK   { background: lightskyblue; }\n.DEX   { background: lightgreen; }\n.PSY   { background: gold; }\n.INT   { background: orchid; }\n.RCV   { background: darkgoldenrod; }\n.TND   { background: peru; }\n.BLOCK { background: darkslateblue; }\n.BOMB  { background: maroon; }\n.WANO  { background: firebrick; }\n.SEMLA  { background: saddlebrown; }\n.RAINBOW { background: linear-gradient(90deg,#fa8072,#ffd700,#90ee90,#87cefa, #da70d6); }\n.SUPERBOMB { background: linear-gradient(90deg, #ff2600, #debb2f, #ff2600); }\n.G     { background: orange; }\n.EMPTY { background: #777; }\n\nhtml, body { height: 100%; }\nbody { margin: 0; font-family: Roboto, \"Helvetica Neue\", sans-serif; background-color: #212121 }\n"],
+        "sourcesContent": ["/* You can add global styles to this file, and also import other style files */\r\n\r\n/* Orb colors */\r\n.STR   { background: salmon; }\r\n.QCK   { background: lightskyblue; }\r\n.DEX   { background: lightgreen; }\r\n.PSY   { background: gold; }\r\n.INT   { background: orchid; }\r\n.RCV   { background: darkgoldenrod; }\r\n.TND   { background: peru; }\r\n.BLOCK { background: darkslateblue; }\r\n.BOMB  { background: maroon; }\r\n.WANO  { background: firebrick; }\r\n.SEMLA  { background: saddlebrown; }\r\n.RAINBOW { background: linear-gradient(90deg,#fa8072,#ffd700,#90ee90,#87cefa, #da70d6); }\r\n.SUPERBOMB { background: linear-gradient(90deg, #ff2600, #debb2f, #ff2600); }\r\n.G     { background: orange; }\r\n.EMPTY { background: #777; }\r\n\r\nhtml, body { height: 100%; }\r\nbody { margin: 0; font-family: Roboto, \"Helvetica Neue\", sans-serif; background-color: #212121 }\r\n"],
         "sourceRoot": ""
       }]); // Exports
 

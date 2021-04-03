@@ -466,7 +466,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       __webpack_require__(
-      /*! /home/runner/work/optc-pirate-rumble-db/optc-pirate-rumble-db/optc-pirate-rumble-db/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js */
+      /*! C:\source\repos\games\optc-pirate-rumble-db\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-polyfills.js */
       "mRIq");
 
       __webpack_require__(
@@ -474,7 +474,7 @@
       "R0gw");
 
       module.exports = __webpack_require__(
-      /*! /home/runner/work/optc-pirate-rumble-db/optc-pirate-rumble-db/optc-pirate-rumble-db/src/polyfills.ts */
+      /*! C:\source\repos\games\optc-pirate-rumble-db\src\polyfills.ts */
       "hN/g");
       /***/
     },
