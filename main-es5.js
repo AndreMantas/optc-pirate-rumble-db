@@ -207,12 +207,10 @@
           key: "ngOnInit",
           value: function ngOnInit() {
             this["class"] = [];
-            console.log('classes', this.classes);
           }
         }, {
           key: "change",
           value: function change() {
-            console.log('change', this["class"]);
             this.classChange.emit(this["class"]);
           }
         }]);
@@ -902,6 +900,12 @@
       var _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
       /*! ./components/type-picker/type-picker.component */
       "wpUN");
+      /* harmony import */
+
+
+      var _angular_material_button__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+      /*! @angular/material/button */
+      "bTqV");
 
       var SharedModule = function SharedModule() {
         _classCallCheck(this, SharedModule);
@@ -914,14 +918,14 @@
         factory: function SharedModule_Factory(t) {
           return new (t || SharedModule)();
         },
-        imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"]], _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"]]
+        imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_16__["MatButtonModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"]], _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_16__["MatButtonModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"]]
       });
 
       (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](SharedModule, {
           declarations: [_components_changelog_changelog_component__WEBPACK_IMPORTED_MODULE_7__["ChangelogComponent"], _pipes_decorate_pipe__WEBPACK_IMPORTED_MODULE_4__["DecoratePipe"], _pipes_effect_pipe__WEBPACK_IMPORTED_MODULE_5__["EffectPipe"], _pipes_marked_pipe__WEBPACK_IMPORTED_MODULE_6__["MarkedPipe"], _pipes_truncate_pipe__WEBPACK_IMPORTED_MODULE_8__["TruncatePipe"], _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"], _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"], _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"]],
-          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"]],
-          exports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"], _components_changelog_changelog_component__WEBPACK_IMPORTED_MODULE_7__["ChangelogComponent"], _pipes_decorate_pipe__WEBPACK_IMPORTED_MODULE_4__["DecoratePipe"], _pipes_effect_pipe__WEBPACK_IMPORTED_MODULE_5__["EffectPipe"], _pipes_marked_pipe__WEBPACK_IMPORTED_MODULE_6__["MarkedPipe"], _pipes_truncate_pipe__WEBPACK_IMPORTED_MODULE_8__["TruncatePipe"], _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"], _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"], _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"]]
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_16__["MatButtonModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"]],
+          exports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_16__["MatButtonModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"], _components_changelog_changelog_component__WEBPACK_IMPORTED_MODULE_7__["ChangelogComponent"], _pipes_decorate_pipe__WEBPACK_IMPORTED_MODULE_4__["DecoratePipe"], _pipes_effect_pipe__WEBPACK_IMPORTED_MODULE_5__["EffectPipe"], _pipes_marked_pipe__WEBPACK_IMPORTED_MODULE_6__["MarkedPipe"], _pipes_truncate_pipe__WEBPACK_IMPORTED_MODULE_8__["TruncatePipe"], _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"], _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"], _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"]]
         });
       })();
       /*@__PURE__*/
@@ -932,8 +936,8 @@
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
           args: [{
             declarations: [_components_changelog_changelog_component__WEBPACK_IMPORTED_MODULE_7__["ChangelogComponent"], _pipes_decorate_pipe__WEBPACK_IMPORTED_MODULE_4__["DecoratePipe"], _pipes_effect_pipe__WEBPACK_IMPORTED_MODULE_5__["EffectPipe"], _pipes_marked_pipe__WEBPACK_IMPORTED_MODULE_6__["MarkedPipe"], _pipes_truncate_pipe__WEBPACK_IMPORTED_MODULE_8__["TruncatePipe"], _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"], _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"], _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"]],
-            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"]],
-            exports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"], _components_changelog_changelog_component__WEBPACK_IMPORTED_MODULE_7__["ChangelogComponent"], _pipes_decorate_pipe__WEBPACK_IMPORTED_MODULE_4__["DecoratePipe"], _pipes_effect_pipe__WEBPACK_IMPORTED_MODULE_5__["EffectPipe"], _pipes_marked_pipe__WEBPACK_IMPORTED_MODULE_6__["MarkedPipe"], _pipes_truncate_pipe__WEBPACK_IMPORTED_MODULE_8__["TruncatePipe"], _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"], _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"], _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"]]
+            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_16__["MatButtonModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"]],
+            exports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_16__["MatButtonModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"], _components_changelog_changelog_component__WEBPACK_IMPORTED_MODULE_7__["ChangelogComponent"], _pipes_decorate_pipe__WEBPACK_IMPORTED_MODULE_4__["DecoratePipe"], _pipes_effect_pipe__WEBPACK_IMPORTED_MODULE_5__["EffectPipe"], _pipes_marked_pipe__WEBPACK_IMPORTED_MODULE_6__["MarkedPipe"], _pipes_truncate_pipe__WEBPACK_IMPORTED_MODULE_8__["TruncatePipe"], _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"], _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"], _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"]]
           }]
         }], null, null);
       })();
@@ -1244,6 +1248,14 @@
                   return u.stats && set.has(u.stats.class1) && (set.size === 1 && !u.stats.class2 || set.has(u.stats.class2));
                 });
               }
+            }
+
+            if (arg.excludeIds && arg.excludeIds.length) {
+              var _set = new Set(arg.excludeIds);
+
+              filtered = filtered.filter(function (u) {
+                return !_set.has(u.id);
+              });
             } // if we wanted to do pagination in this pipe:
             // const start = arg.page * arg.limit;
             // return filtered.slice(start, start + arg.limit);
@@ -1576,12 +1588,10 @@
           key: "ngOnInit",
           value: function ngOnInit() {
             this.type = [];
-            console.log('types', this.types);
           }
         }, {
           key: "change",
           value: function change() {
-            console.log('change', this.type);
             this.classChange.emit(this.type);
           }
         }]);

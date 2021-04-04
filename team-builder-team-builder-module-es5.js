@@ -7,13 +7,9 @@
 
   function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-  function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
   function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
 
   function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-  function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
   function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -29,13 +25,1590 @@
 
   function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+  function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+  function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+  function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+  function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+  function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+  function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
   function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
   function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["team-builder-team-builder-module"], {
+    /***/
+    "+9r9":
+    /*!********************************************************************************************!*\
+      !*** ./node_modules/@material-extended/mde/__ivy_ngcc__/fesm2015/material-extended-mde.js ***!
+      \********************************************************************************************/
+
+    /*! exports provided: MdePopover, MdePopoverModule, MdePopoverTarget, MdePopoverTrigger, transformPopover */
+
+    /***/
+    function r9(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "MdePopover", function () {
+        return MdePopover;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "MdePopoverModule", function () {
+        return MdePopoverModule;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "MdePopoverTarget", function () {
+        return MdePopoverTarget;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "MdePopoverTrigger", function () {
+        return MdePopoverTrigger;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "transformPopover", function () {
+        return transformPopover;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "mrSG");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/common */
+      "ofXK");
+      /* harmony import */
+
+
+      var _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/cdk/overlay */
+      "rDax");
+      /* harmony import */
+
+
+      var _angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! @angular/cdk/coercion */
+      "8LU1");
+      /* harmony import */
+
+
+      var _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! @angular/cdk/keycodes */
+      "FtGj");
+      /* harmony import */
+
+
+      var _angular_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! @angular/animations */
+      "R0Ic");
+      /* harmony import */
+
+
+      var _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @angular/cdk/a11y */
+      "u47x");
+      /* harmony import */
+
+
+      var _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! @angular/cdk/bidi */
+      "cH1L");
+      /* harmony import */
+
+
+      var _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! @angular/cdk/portal */
+      "+rOU");
+      /**
+       * Throws an exception for the case when popover trigger doesn't have a valid mde-popover instance
+       */
+
+
+      function MdePopover_ng_template_0_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "div", 3);
+        }
+
+        if (rf & 2) {
+          var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", ctx_r1.popoverArrowStyles);
+        }
+      }
+
+      function MdePopover_ng_template_0_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keydown", function MdePopover_ng_template_0_Template_div_keydown_0_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3);
+
+            var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+            return ctx_r2._handleKeydown($event);
+          })("click", function MdePopover_ng_template_0_Template_div_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3);
+
+            var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+            return ctx_r4.onClick();
+          })("mouseover", function MdePopover_ng_template_0_Template_div_mouseover_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3);
+
+            var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+            return ctx_r5.onMouseOver();
+          })("mouseleave", function MdePopover_ng_template_0_Template_div_mouseleave_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r3);
+
+            var ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+            return ctx_r6.onMouseLeave();
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, MdePopover_ng_template_0_div_1_Template, 1, 1, "div", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵprojection"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("mde-popover-overlap", ctx_r0.overlapTrigger);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngClass", ctx_r0._classList)("ngStyle", ctx_r0.popoverPanelStyles)("@.disabled", ctx_r0.disableAnimation)("@transformPopover", "enter");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx_r0.overlapTrigger);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", ctx_r0.popoverContentStyles)("cdkTrapFocus", ctx_r0.focusTrapEnabled)("cdkTrapFocusAutoCapture", ctx_r0.focusTrapAutoCaptureEnabled);
+        }
+      }
+
+      var _c0 = ["*"];
+
+      function throwMdePopoverMissingError() {
+        throw Error("mde-popover-trigger: must pass in an mde-popover instance.\n\n    Example:\n      <mde-popover #popover=\"mdePopover\"></mde-popover>\n      <button [mdePopoverTriggerFor]=\"popover\"></button>");
+      }
+      /**
+       * Throws an exception for the case when popover's mdePopoverPositionX value isn't valid.
+       * In other words, it doesn't match 'before' or 'after'.
+       */
+
+
+      function throwMdePopoverInvalidPositionX() {
+        throw Error("mdePopoverPositionX value must be either 'before' or after'.\n      Example: <mde-popover mdePopoverPositionX=\"before\" #popover=\"mdePopover\"></mde-popover>");
+      }
+      /**
+       * Throws an exception for the case when popover's mdePopoverPositionY value isn't valid.
+       * In other words, it doesn't match 'above' or 'below'.
+       */
+
+
+      function throwMdePopoverInvalidPositionY() {
+        throw Error("mdePopoverPositionY value must be either 'above' or below'.\n      Example: <mde-popover mdePopoverPositionY=\"above\" #popover=\"mdePopover\"></mde-popover>");
+      }
+      /**
+       * Below are all the animations for the md-popover component.
+       * Animation duration and timing values are based on AngularJS Material.
+       */
+
+      /**
+       * This animation controls the popover panel's entry and exit from the page.
+       *
+       * When the popover panel is added to the DOM, it scales in and fades in its border.
+       *
+       * When the popover panel is removed from the DOM, it simply fades out after a brief
+       * delay to display the ripple.
+       */
+
+
+      var transformPopover = Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["trigger"])('transformPopover', [Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["state"])('enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["style"])({
+        opacity: 1,
+        transform: "scale(1)"
+      })), Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["transition"])('void => *', [Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["style"])({
+        opacity: 0,
+        transform: "scale(0)"
+      }), Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["animate"])("200ms cubic-bezier(0.25, 0.8, 0.25, 1)")]), Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["transition"])('* => void', [Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["animate"])('50ms 100ms linear', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["style"])({
+        opacity: 0
+      }))])]);
+
+      var MdePopover = /*#__PURE__*/function () {
+        function MdePopover(_elementRef, zone) {
+          _classCallCheck(this, MdePopover);
+
+          this._elementRef = _elementRef;
+          this.zone = zone;
+          this.role = 'dialog';
+          /** Settings for popover, view setters and getters for more detail */
+
+          this._positionX = 'after';
+          this._positionY = 'below';
+          this._triggerEvent = 'hover';
+          this._enterDelay = 200;
+          this._leaveDelay = 200;
+          this._overlapTrigger = true;
+          this._disableAnimation = false;
+          this._targetOffsetX = 0;
+          this._targetOffsetY = 0;
+          this._arrowOffsetX = 20;
+          this._arrowWidth = 8;
+          this._arrowColor = 'rgba(0, 0, 0, 0.12)';
+          this._closeOnClick = true;
+          this._focusTrapEnabled = true;
+          this._focusTrapAutoCaptureEnabled = true;
+          /** Config object to be passed into the popover's ngClass */
+
+          this._classList = {}; // TODO: Write comment description
+
+          /** */
+
+          this.containerPositioning = false;
+          /** Closing disabled on popover */
+
+          this.closeDisabled = false;
+          /** Emits the current animation state whenever it changes. */
+
+          this._onAnimationStateChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+          /** Event emitted when the popover is closed. */
+
+          this.close = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+          this.setPositionClasses();
+        }
+        /** Position of the popover in the X axis. */
+
+
+        _createClass(MdePopover, [{
+          key: "ngOnDestroy",
+          value: function ngOnDestroy() {
+            this._emitCloseEvent();
+
+            this.close.complete();
+          }
+          /** Handle a keyboard event from the popover, delegating to the appropriate action. */
+
+        }, {
+          key: "_handleKeydown",
+          value: function _handleKeydown(event) {
+            switch (event.keyCode) {
+              case _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_5__["ESCAPE"]:
+                this._emitCloseEvent();
+
+                return;
+            }
+          }
+          /**
+           * This emits a close event to which the trigger is subscribed. When emitted, the
+           * trigger will close the popover.
+           */
+
+        }, {
+          key: "_emitCloseEvent",
+          value: function _emitCloseEvent() {
+            this.close.emit();
+          }
+          /** Close popover on click if closeOnClick is true */
+
+        }, {
+          key: "onClick",
+          value: function onClick() {
+            if (this.closeOnClick) {
+              this._emitCloseEvent();
+            }
+          }
+          /**
+           * TODO: Refactor when @angular/cdk includes feature I mentioned on github see link below.
+           * https://github.com/angular/material2/pull/5493#issuecomment-313085323
+           */
+
+          /** Disables close of popover when leaving trigger element and mouse over the popover */
+
+        }, {
+          key: "onMouseOver",
+          value: function onMouseOver() {
+            if (this.triggerEvent === 'hover') {
+              this.closeDisabled = true;
+            }
+          }
+          /** Enables close of popover when mouse leaving popover element */
+
+        }, {
+          key: "onMouseLeave",
+          value: function onMouseLeave() {
+            if (this.triggerEvent === 'hover') {
+              this.closeDisabled = false;
+
+              this._emitCloseEvent();
+            }
+          } // TODO: Refactor how styles are set and updated on the component, use best practices.
+          // TODO: If arrow left and right positioning is requested, see if flex direction can be used to work with order.
+
+          /** Sets the current styles for the popover to allow for dynamically changing settings */
+
+        }, {
+          key: "setCurrentStyles",
+          value: function setCurrentStyles() {
+            // TODO: See if arrow position can be calculated automatically and allow override.
+            // TODO: See if flex order is a better alternative to position arrow top or bottom.
+            this.popoverArrowStyles = {
+              'right': this.positionX === 'before' ? this.arrowOffsetX - this.arrowWidth + 'px' : '',
+              'left': this.positionX === 'after' ? this.arrowOffsetX - this.arrowWidth + 'px' : '',
+              'border-top': this.positionY === 'below' ? this.arrowWidth + 'px solid ' + this.arrowColor : '0px solid transparent',
+              'border-right': 'undefined' === undefined ? this.arrowWidth + 'px solid ' + this.arrowColor : this.arrowWidth + 'px solid transparent',
+              'border-bottom': this.positionY === 'above' ? this.arrowWidth + 'px solid ' + this.arrowColor : this.arrowWidth + 'px solid transparent',
+              'border-left': 'undefined' === undefined ? this.arrowWidth + 'px solid ' + this.arrowColor : this.arrowWidth + 'px solid transparent'
+            }; // TODO: Remove if flex order is added.
+
+            this.popoverContentStyles = {
+              'padding-top': this.overlapTrigger === true ? '0px' : this.arrowWidth + 'px',
+              'padding-bottom': this.overlapTrigger === true ? '0px' : this.arrowWidth + 'px',
+              'margin-top': this.overlapTrigger === false && this.positionY === 'below' && this.containerPositioning === false ? -(this.arrowWidth * 2) + 'px' : '0px'
+            };
+          }
+          /**
+           * It's necessary to set position-based classes to ensure the popover panel animation
+           * folds out from the correct direction.
+           */
+
+        }, {
+          key: "setPositionClasses",
+          value: function setPositionClasses() {
+            var posX = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.positionX;
+            var posY = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.positionY;
+            this._classList['mde-popover-before'] = posX === 'before';
+            this._classList['mde-popover-after'] = posX === 'after';
+            this._classList['mde-popover-above'] = posY === 'above';
+            this._classList['mde-popover-below'] = posY === 'below';
+          }
+        }, {
+          key: "positionX",
+          get: function get() {
+            return this._positionX;
+          },
+          set: function set(value) {
+            if (value !== 'before' && value !== 'after') {
+              throwMdePopoverInvalidPositionX();
+            }
+
+            this._positionX = value;
+            this.setPositionClasses();
+          }
+          /** Position of the popover in the Y axis. */
+
+        }, {
+          key: "positionY",
+          get: function get() {
+            return this._positionY;
+          },
+          set: function set(value) {
+            if (value !== 'above' && value !== 'below') {
+              throwMdePopoverInvalidPositionY();
+            }
+
+            this._positionY = value;
+            this.setPositionClasses();
+          }
+          /** Popover trigger event */
+
+        }, {
+          key: "triggerEvent",
+          get: function get() {
+            return this._triggerEvent;
+          },
+          set: function set(value) {
+            this._triggerEvent = value;
+          }
+          /** Popover enter delay */
+
+        }, {
+          key: "enterDelay",
+          get: function get() {
+            return this._enterDelay;
+          },
+          set: function set(value) {
+            this._enterDelay = value;
+          }
+          /** Popover leave delay */
+
+        }, {
+          key: "leaveDelay",
+          get: function get() {
+            return this._leaveDelay;
+          },
+          set: function set(value) {
+            this._leaveDelay = value;
+          }
+          /** Popover overlap trigger */
+
+        }, {
+          key: "overlapTrigger",
+          get: function get() {
+            return this._overlapTrigger;
+          },
+          set: function set(value) {
+            this._overlapTrigger = value;
+          }
+          /** Popover target offset x */
+
+        }, {
+          key: "targetOffsetX",
+          get: function get() {
+            return this._targetOffsetX;
+          },
+          set: function set(value) {
+            this._targetOffsetX = value;
+          }
+          /** Popover target offset y */
+
+        }, {
+          key: "targetOffsetY",
+          get: function get() {
+            return this._targetOffsetY;
+          },
+          set: function set(value) {
+            this._targetOffsetY = value;
+          }
+          /** Popover arrow offset x */
+
+        }, {
+          key: "arrowOffsetX",
+          get: function get() {
+            return this._arrowOffsetX;
+          },
+          set: function set(value) {
+            this._arrowOffsetX = value;
+          }
+          /** Popover arrow width */
+
+        }, {
+          key: "arrowWidth",
+          get: function get() {
+            return this._arrowWidth;
+          },
+          set: function set(value) {
+            this._arrowWidth = value;
+          }
+          /** Popover arrow color */
+
+        }, {
+          key: "arrowColor",
+          get: function get() {
+            return this._arrowColor;
+          },
+          set: function set(value) {
+            this._arrowColor = value;
+          }
+          /**
+           * Popover container close on click
+           * default: true
+           */
+
+        }, {
+          key: "closeOnClick",
+          get: function get() {
+            return this._closeOnClick;
+          },
+          set: function set(value) {
+            this._closeOnClick = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceBooleanProperty"])(value);
+          }
+          /**
+           * Disable animations of popover and all child elements
+           * default: false
+           */
+
+        }, {
+          key: "disableAnimation",
+          get: function get() {
+            return this._disableAnimation;
+          },
+          set: function set(value) {
+            this._disableAnimation = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceBooleanProperty"])(value);
+          }
+          /**
+           * Popover focus trap using cdkTrapFocus
+           * default: true
+           */
+
+        }, {
+          key: "focusTrapEnabled",
+          get: function get() {
+            return this._focusTrapEnabled;
+          },
+          set: function set(value) {
+            this._focusTrapEnabled = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceBooleanProperty"])(value);
+          }
+          /**
+           * Popover focus trap auto capture using cdkTrapFocusAutoCapture
+           * default: true
+           */
+
+        }, {
+          key: "focusTrapAutoCaptureEnabled",
+          get: function get() {
+            return this._focusTrapAutoCaptureEnabled;
+          },
+          set: function set(value) {
+            this._focusTrapAutoCaptureEnabled = Object(_angular_cdk_coercion__WEBPACK_IMPORTED_MODULE_4__["coerceBooleanProperty"])(value);
+          }
+          /**
+           * This method takes classes set on the host md-popover element and applies them on the
+           * popover template that displays in the overlay container.  Otherwise, it's difficult
+           * to style the containing popover from outside the component.
+           * @param classes list of class names
+           */
+
+        }, {
+          key: "panelClass",
+          set: function set(classes) {
+            if (classes && classes.length) {
+              this._classList = classes.split(' ').reduce(function (obj, className) {
+                obj[className] = true;
+                return obj;
+              }, {});
+              this._elementRef.nativeElement.className = '';
+              this.setPositionClasses();
+            }
+          }
+          /**
+           * This method takes classes set on the host md-popover element and applies them on the
+           * popover template that displays in the overlay container.  Otherwise, it's difficult
+           * to style the containing popover from outside the component.
+           * @deprecated Use `panelClass` instead.
+           */
+
+        }, {
+          key: "classList",
+          get: function get() {
+            return this.panelClass;
+          },
+          set: function set(classes) {
+            this.panelClass = classes;
+          }
+        }]);
+
+        return MdePopover;
+      }();
+
+      MdePopover.ɵfac = function MdePopover_Factory(t) {
+        return new (t || MdePopover)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]));
+      };
+
+      MdePopover.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+        type: MdePopover,
+        selectors: [["mde-popover"]],
+        viewQuery: function MdePopover_Query(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], true);
+          }
+
+          if (rf & 2) {
+            var _t;
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.templateRef = _t.first);
+          }
+        },
+        hostVars: 1,
+        hostBindings: function MdePopover_HostBindings(rf, ctx) {
+          if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵattribute"]("role", ctx.role);
+          }
+        },
+        inputs: {
+          positionX: ["mdePopoverPositionX", "positionX"],
+          positionY: ["mdePopoverPositionY", "positionY"],
+          triggerEvent: ["mdePopoverTriggerOn", "triggerEvent"],
+          enterDelay: ["mdePopoverEnterDelay", "enterDelay"],
+          leaveDelay: ["mdePopoverLeaveDelay", "leaveDelay"],
+          overlapTrigger: ["mdePopoverOverlapTrigger", "overlapTrigger"],
+          targetOffsetX: ["mdePopoverOffsetX", "targetOffsetX"],
+          targetOffsetY: ["mdePopoverOffsetY", "targetOffsetY"],
+          arrowOffsetX: ["mdePopoverArrowOffsetX", "arrowOffsetX"],
+          arrowWidth: ["mdePopoverArrowWidth", "arrowWidth"],
+          arrowColor: ["mdePopoverArrowColor", "arrowColor"],
+          closeOnClick: ["mdePopoverCloseOnClick", "closeOnClick"],
+          disableAnimation: ["mdePopoverDisableAnimation", "disableAnimation"],
+          focusTrapEnabled: ["mdeFocusTrapEnabled", "focusTrapEnabled"],
+          focusTrapAutoCaptureEnabled: ["mdeFocusTrapAutoCaptureEnabled", "focusTrapAutoCaptureEnabled"],
+          panelClass: ["class", "panelClass"],
+          classList: "classList"
+        },
+        outputs: {
+          close: "close"
+        },
+        exportAs: ["mdePopover"],
+        ngContentSelectors: _c0,
+        decls: 1,
+        vars: 0,
+        consts: [["role", "dialog", 1, "mde-popover-panel", 3, "ngClass", "ngStyle", "keydown", "click", "mouseover", "mouseleave"], ["class", "mde-popover-direction-arrow", 3, "ngStyle", 4, "ngIf"], [1, "mde-popover-content", 3, "ngStyle", "cdkTrapFocus", "cdkTrapFocusAutoCapture"], [1, "mde-popover-direction-arrow", 3, "ngStyle"]],
+        template: function MdePopover_Template(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵprojectionDef"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, MdePopover_ng_template_0_Template, 4, 10, "ng-template");
+          }
+        },
+        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_7__["CdkTrapFocus"]],
+        styles: [".mde-popover-panel{display:flex;flex-direction:column;max-height:calc(100vh + 48px)}.mde-popover-ripple{position:absolute;top:0;left:0;bottom:0;right:0}.mde-popover-below .mde-popover-direction-arrow{position:absolute;bottom:0;width:0;height:0;border-bottom-width:0!important;z-index:99999}.mde-popover-above .mde-popover-direction-arrow{position:absolute;top:0;width:0;height:0;border-top-width:0!important;z-index:99999}.mde-popover-after .mde-popover-direction-arrow{left:20px}.mde-popover-before .mde-popover-direction-arrow{right:20px}"],
+        encapsulation: 2,
+        data: {
+          animation: [transformPopover]
+        },
+        changeDetection: 0
+      });
+
+      MdePopover.ctorParameters = function () {
+        return [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+        }];
+      };
+
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"])('attr.role')], MdePopover.prototype, "role", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverPositionX')], MdePopover.prototype, "positionX", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverPositionY')], MdePopover.prototype, "positionY", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverTriggerOn')], MdePopover.prototype, "triggerEvent", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverEnterDelay')], MdePopover.prototype, "enterDelay", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverLeaveDelay')], MdePopover.prototype, "leaveDelay", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverOverlapTrigger')], MdePopover.prototype, "overlapTrigger", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverOffsetX')], MdePopover.prototype, "targetOffsetX", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverOffsetY')], MdePopover.prototype, "targetOffsetY", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverArrowOffsetX')], MdePopover.prototype, "arrowOffsetX", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverArrowWidth')], MdePopover.prototype, "arrowWidth", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverArrowColor')], MdePopover.prototype, "arrowColor", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverCloseOnClick')], MdePopover.prototype, "closeOnClick", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverDisableAnimation')], MdePopover.prototype, "disableAnimation", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdeFocusTrapEnabled')], MdePopover.prototype, "focusTrapEnabled", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdeFocusTrapAutoCaptureEnabled')], MdePopover.prototype, "focusTrapAutoCaptureEnabled", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('class')], MdePopover.prototype, "panelClass", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], MdePopover.prototype, "classList", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()], MdePopover.prototype, "close", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"])], MdePopover.prototype, "templateRef", void 0);
+      /**
+       * This directive is intended to be used in conjunction with an mde-popover tag. It is
+       * responsible for toggling the display of the provided popover instance.
+       */
+
+      var MdePopoverTrigger = /*#__PURE__*/function () {
+        function MdePopoverTrigger(_overlay, _elementRef, _viewContainerRef, _dir, _changeDetectorRef) {
+          _classCallCheck(this, MdePopoverTrigger);
+
+          this._overlay = _overlay;
+          this._elementRef = _elementRef;
+          this._viewContainerRef = _viewContainerRef;
+          this._dir = _dir;
+          this._changeDetectorRef = _changeDetectorRef;
+          this.ariaHaspopup = true;
+          this._overlayRef = null;
+          this._popoverOpen = false;
+          this._halt = false; // tracking input type is necessary so it's possible to only auto-focus
+          // the first item of the list when the popover is opened via the keyboard
+
+          this._openedByMouse = false;
+          /** Popover backdrop close on click */
+
+          this.backdropCloseOnClick = true;
+          /** Event emitted when the associated popover is opened. */
+
+          this.opened = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+          /** Event emitted when the associated popover is closed. */
+
+          this.closed = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        }
+
+        _createClass(MdePopoverTrigger, [{
+          key: "ngAfterViewInit",
+          value: function ngAfterViewInit() {
+            var _this = this;
+
+            this._checkPopover();
+
+            this._setCurrentConfig();
+
+            this.popover.close.subscribe(function () {
+              return _this.closePopover();
+            });
+          }
+        }, {
+          key: "ngOnDestroy",
+          value: function ngOnDestroy() {
+            this.destroyPopover();
+          }
+        }, {
+          key: "_setCurrentConfig",
+          value: function _setCurrentConfig() {
+            if (this.positionX === 'before' || this.positionX === 'after') {
+              this.popover.positionX = this.positionX;
+            }
+
+            if (this.positionY === 'above' || this.positionY === 'below') {
+              this.popover.positionY = this.positionY;
+            }
+
+            if (this.triggerEvent) {
+              this.popover.triggerEvent = this.triggerEvent;
+            }
+
+            if (this.enterDelay) {
+              this.popover.enterDelay = this.enterDelay;
+            }
+
+            if (this.leaveDelay) {
+              this.popover.leaveDelay = this.leaveDelay;
+            }
+
+            if (this.overlapTrigger === true || this.overlapTrigger === false) {
+              this.popover.overlapTrigger = this.overlapTrigger;
+            }
+
+            if (this.targetOffsetX) {
+              this.popover.targetOffsetX = this.targetOffsetX;
+            }
+
+            if (this.targetOffsetY) {
+              this.popover.targetOffsetY = this.targetOffsetY;
+            }
+
+            if (this.arrowOffsetX) {
+              this.popover.arrowOffsetX = this.arrowOffsetX;
+            }
+
+            if (this.arrowWidth) {
+              this.popover.arrowWidth = this.arrowWidth;
+            }
+
+            if (this.arrowColor) {
+              this.popover.arrowColor = this.arrowColor;
+            }
+
+            if (this.closeOnClick === true || this.closeOnClick === false) {
+              this.popover.closeOnClick = this.closeOnClick;
+            }
+
+            this.popover.setCurrentStyles();
+          }
+          /** Whether the popover is open. */
+
+        }, {
+          key: "onClick",
+          value: function onClick(event) {
+            if (this.popover.triggerEvent === 'click') {
+              // this.popover.setCurrentStyles();
+              // this._setCurrentConfig();
+              this.togglePopover();
+            }
+          }
+        }, {
+          key: "onMouseEnter",
+          value: function onMouseEnter(event) {
+            var _this2 = this;
+
+            this._halt = false;
+
+            if (this.popover.triggerEvent === 'hover') {
+              this._mouseoverTimer = setTimeout(function () {
+                _this2.openPopover();
+              }, this.popover.enterDelay);
+            }
+          }
+        }, {
+          key: "onMouseLeave",
+          value: function onMouseLeave(event) {
+            var _this3 = this;
+
+            if (this.popover.triggerEvent === 'hover') {
+              if (this._mouseoverTimer) {
+                clearTimeout(this._mouseoverTimer);
+                this._mouseoverTimer = null;
+              }
+
+              if (this._popoverOpen) {
+                setTimeout(function () {
+                  if (!_this3.popover.closeDisabled) {
+                    _this3.closePopover();
+                  }
+                }, this.popover.leaveDelay);
+              } else {
+                this._halt = true;
+              }
+            }
+          }
+          /** Toggles the popover between the open and closed states. */
+
+        }, {
+          key: "togglePopover",
+          value: function togglePopover() {
+            return this._popoverOpen ? this.closePopover() : this.openPopover();
+          }
+          /** Opens the popover. */
+
+        }, {
+          key: "openPopover",
+          value: function openPopover() {
+            if (!this._popoverOpen && !this._halt) {
+              this._createOverlay().attach(this._portal);
+              /** Only subscribe to backdrop if trigger event is click */
+
+
+              if (this.triggerEvent === 'click' && this.backdropCloseOnClick === true) {
+                this._subscribeToBackdrop();
+              }
+
+              this._initPopover();
+            }
+          }
+          /** Closes the popover. */
+
+        }, {
+          key: "closePopover",
+          value: function closePopover() {
+            if (this._overlayRef) {
+              this._overlayRef.detach();
+              /** Only unsubscribe to backdrop if trigger event is click */
+
+
+              if (this.triggerEvent === 'click' && this.backdropCloseOnClick === true) {
+                this._backdropSubscription.unsubscribe();
+              }
+
+              this._resetPopover();
+            }
+          }
+          /** Removes the popover from the DOM. */
+
+        }, {
+          key: "destroyPopover",
+          value: function destroyPopover() {
+            if (this._mouseoverTimer) {
+              clearTimeout(this._mouseoverTimer);
+              this._mouseoverTimer = null;
+            }
+
+            if (this._overlayRef) {
+              this._overlayRef.dispose();
+
+              this._overlayRef = null;
+
+              this._cleanUpSubscriptions();
+            }
+          }
+          /** Focuses the popover trigger. */
+
+        }, {
+          key: "focus",
+          value: function focus() {
+            this._elementRef.nativeElement.focus();
+          }
+          /** The text direction of the containing app. */
+
+        }, {
+          key: "_subscribeToBackdrop",
+
+          /**
+          * This method ensures that the popover closes when the overlay backdrop is clicked.
+          * We do not use first() here because doing so would not catch clicks from within
+          * the popover, and it would fail to unsubscribe properly. Instead, we unsubscribe
+          * explicitly when the popover is closed or destroyed.
+          */
+          value: function _subscribeToBackdrop() {
+            var _this4 = this;
+
+            if (this._overlayRef) {
+              this._backdropSubscription = this._overlayRef.backdropClick().subscribe(function () {
+                _this4.popover._emitCloseEvent();
+              });
+            }
+          }
+          /**
+          * This method sets the popover state to open and focuses the first item if
+          * the popover was opened via the keyboard.
+          */
+
+        }, {
+          key: "_initPopover",
+          value: function _initPopover() {
+            this._setIsPopoverOpen(true);
+          }
+          /**
+          * This method resets the popover when it's closed, most importantly restoring
+          * focus to the popover trigger if the popover was opened via the keyboard.
+          */
+
+        }, {
+          key: "_resetPopover",
+          value: function _resetPopover() {
+            this._setIsPopoverOpen(false); // Focus only needs to be reset to the host element if the popover was opened
+            // by the keyboard and manually shifted to the first popover item.
+
+
+            if (!this._openedByMouse) {
+              this.focus();
+            }
+
+            this._openedByMouse = false;
+          }
+          /** set state rather than toggle to support triggers sharing a popover */
+
+        }, {
+          key: "_setIsPopoverOpen",
+          value: function _setIsPopoverOpen(isOpen) {
+            this._popoverOpen = isOpen;
+            this._popoverOpen ? this.opened.emit() : this.closed.emit();
+          }
+          /**
+          *  This method checks that a valid instance of MdPopover has been passed into
+          *  mdPopoverTriggerFor. If not, an exception is thrown.
+          */
+
+        }, {
+          key: "_checkPopover",
+          value: function _checkPopover() {
+            if (!this.popover) {
+              throwMdePopoverMissingError();
+            }
+          }
+          /**
+          *  This method creates the overlay from the provided popover's template and saves its
+          *  OverlayRef so that it can be attached to the DOM when openPopover is called.
+          */
+
+        }, {
+          key: "_createOverlay",
+          value: function _createOverlay() {
+            if (!this._overlayRef) {
+              this._portal = new _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_9__["TemplatePortal"](this.popover.templateRef, this._viewContainerRef);
+
+              var config = this._getOverlayConfig();
+
+              this._subscribeToPositions(config.positionStrategy);
+
+              this._overlayRef = this._overlay.create(config);
+            }
+
+            return this._overlayRef;
+          }
+          /**
+          * This method builds the configuration object needed to create the overlay, the OverlayConfig.
+          * @returns OverlayConfig
+          */
+
+        }, {
+          key: "_getOverlayConfig",
+          value: function _getOverlayConfig() {
+            var overlayState = new _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_3__["OverlayConfig"]();
+            overlayState.positionStrategy = this._getPosition();
+            /** Display overlay backdrop if trigger event is click */
+
+            if (this.triggerEvent === 'click') {
+              overlayState.hasBackdrop = true;
+              overlayState.backdropClass = 'cdk-overlay-transparent-backdrop';
+            }
+
+            overlayState.direction = this.dir;
+            overlayState.scrollStrategy = this._overlay.scrollStrategies.reposition();
+            return overlayState;
+          }
+          /**
+          * Listens to changes in the position of the overlay and sets the correct classes
+          * on the popover based on the new position. This ensures the animation origin is always
+          * correct, even if a fallback position is used for the overlay.
+          */
+
+        }, {
+          key: "_subscribeToPositions",
+          value: function _subscribeToPositions(position) {
+            var _this5 = this;
+
+            this._positionSubscription = position.positionChanges.subscribe(function (change) {
+              var posisionX = change.connectionPair.overlayX === 'start' ? 'after' : 'before';
+              var posisionY = change.connectionPair.overlayY === 'top' ? 'below' : 'above';
+
+              if (!_this5.popover.overlapTrigger) {
+                posisionY = posisionY === 'below' ? 'above' : 'below';
+              } // required for ChangeDetectionStrategy.OnPush
+
+
+              _this5._changeDetectorRef.markForCheck();
+
+              _this5.popover.zone.run(function () {
+                _this5.popover.positionX = posisionX;
+                _this5.popover.positionY = posisionY;
+
+                _this5.popover.setCurrentStyles();
+
+                _this5.popover.setPositionClasses(posisionX, posisionY);
+              });
+            });
+          }
+          /**
+          * This method builds the position strategy for the overlay, so the popover is properly connected
+          * to the trigger.
+          * @returns ConnectedPositionStrategy
+          */
+
+        }, {
+          key: "_getPosition",
+          value: function _getPosition() {
+            var _ref = this.popover.positionX === 'before' ? ['end', 'start'] : ['start', 'end'],
+                _ref2 = _slicedToArray(_ref, 2),
+                originX = _ref2[0],
+                originFallbackX = _ref2[1];
+
+            var _ref3 = this.popover.positionY === 'above' ? ['bottom', 'top'] : ['top', 'bottom'],
+                _ref4 = _slicedToArray(_ref3, 2),
+                overlayY = _ref4[0],
+                overlayFallbackY = _ref4[1]; // let originY = overlayY;
+            // let fallbackOriginY = overlayFallbackY;
+
+
+            var originY = overlayY;
+            var originFallbackY = overlayFallbackY;
+            var overlayX = originX;
+            var overlayFallbackX = originFallbackX; // let [originY, originFallbackY] = [overlayY, overlayFallbackY];
+            // let [overlayX, overlayFallbackX] = [originX, originFallbackX];
+
+            /** Reverse overlayY and fallbackOverlayY when overlapTrigger is false */
+
+            if (!this.popover.overlapTrigger) {
+              originY = overlayY === 'top' ? 'bottom' : 'top';
+              originFallbackY = overlayFallbackY === 'top' ? 'bottom' : 'top';
+            }
+
+            var offsetX = 0;
+            var offsetY = 0;
+
+            if (this.popover.targetOffsetX && !isNaN(Number(this.popover.targetOffsetX))) {
+              offsetX = Number(this.popover.targetOffsetX); // offsetX = -16;
+            }
+
+            if (this.popover.targetOffsetY && !isNaN(Number(this.popover.targetOffsetY))) {
+              offsetY = Number(this.popover.targetOffsetY); // offsetY = -10;
+            }
+            /**
+             * For overriding position element, when mdePopoverTargetAt has a valid element reference.
+             * Useful for sticking popover to parent element and offsetting arrow to trigger element.
+             * If undefined defaults to the trigger element reference.
+             */
+
+
+            var element = this._elementRef;
+
+            if (typeof this.targetElement !== 'undefined') {
+              this.popover.containerPositioning = true;
+              element = this.targetElement._elementRef;
+            }
+
+            return this._overlay.position().flexibleConnectedTo(element).withPositions([{
+              originX: originX,
+              originY: originY,
+              overlayX: overlayX,
+              overlayY: overlayY,
+              offsetY: offsetY
+            }, {
+              originX: originFallbackX,
+              originY: originY,
+              overlayX: overlayFallbackX,
+              overlayY: overlayY,
+              offsetY: offsetY
+            }, {
+              originX: originX,
+              originY: originFallbackY,
+              overlayX: overlayX,
+              overlayY: overlayFallbackY,
+              offsetY: -offsetY
+            }, {
+              originX: originFallbackX,
+              originY: originFallbackY,
+              overlayX: overlayFallbackX,
+              overlayY: overlayFallbackY,
+              offsetY: -offsetY
+            }]).withDefaultOffsetX(offsetX).withDefaultOffsetY(offsetY);
+            /*
+            return this._overlay.position()
+              .connectedTo(element,
+                  {originX: posX, originY: originY},
+                  {overlayX: posX, overlayY: overlayY})
+              .withFallbackPosition(
+                  {originX: fallbackX, originY: originY},
+                  {overlayX: fallbackX, overlayY: overlayY})
+              .withFallbackPosition(
+                  {originX: posX, originY: fallbackOriginY},
+                  {overlayX: posX, overlayY: fallbackOverlayY})
+              .withFallbackPosition(
+                  {originX: fallbackX, originY: fallbackOriginY},
+                  {overlayX: fallbackX, overlayY: fallbackOverlayY})
+              .withOffsetX(offsetX)
+              .withOffsetY(offsetY);
+              */
+          }
+        }, {
+          key: "_cleanUpSubscriptions",
+          value: function _cleanUpSubscriptions() {
+            if (this._backdropSubscription) {
+              this._backdropSubscription.unsubscribe();
+            }
+
+            if (this._positionSubscription) {
+              this._positionSubscription.unsubscribe();
+            }
+          }
+        }, {
+          key: "_handleMousedown",
+          value: function _handleMousedown(event) {
+            if (event && !Object(_angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_7__["isFakeMousedownFromScreenReader"])(event)) {
+              this._openedByMouse = true;
+            }
+          }
+        }, {
+          key: "popoverOpen",
+          get: function get() {
+            return this._popoverOpen;
+          }
+        }, {
+          key: "dir",
+          get: function get() {
+            return this._dir && this._dir.value === 'rtl' ? 'rtl' : 'ltr';
+          }
+        }]);
+
+        return MdePopoverTrigger;
+      }();
+
+      MdePopoverTrigger.ɵfac = function MdePopoverTrigger_Factory(t) {
+        return new (t || MdePopoverTrigger)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_3__["Overlay"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]));
+      };
+
+      MdePopoverTrigger.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+        type: MdePopoverTrigger,
+        selectors: [["", "mdePopoverTriggerFor", ""]],
+        hostVars: 1,
+        hostBindings: function MdePopoverTrigger_HostBindings(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function MdePopoverTrigger_click_HostBindingHandler($event) {
+              return ctx.onClick($event);
+            })("mouseenter", function MdePopoverTrigger_mouseenter_HostBindingHandler($event) {
+              return ctx.onMouseEnter($event);
+            })("mouseleave", function MdePopoverTrigger_mouseleave_HostBindingHandler($event) {
+              return ctx.onMouseLeave($event);
+            })("mousedown", function MdePopoverTrigger_mousedown_HostBindingHandler($event) {
+              return ctx._handleMousedown($event);
+            });
+          }
+
+          if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵattribute"]("aria-haspopup", ctx.ariaHaspopup);
+          }
+        },
+        inputs: {
+          backdropCloseOnClick: ["mdePopoverBackdropCloseOnClick", "backdropCloseOnClick"],
+          popover: ["mdePopoverTriggerFor", "popover"],
+          targetElement: ["mdePopoverTargetAt", "targetElement"],
+          positionX: ["mdePopoverPositionX", "positionX"],
+          positionY: ["mdePopoverPositionY", "positionY"],
+          triggerEvent: ["mdePopoverTriggerOn", "triggerEvent"],
+          enterDelay: ["mdePopoverEnterDelay", "enterDelay"],
+          leaveDelay: ["mdePopoverLeaveDelay", "leaveDelay"],
+          overlapTrigger: ["mdePopoverOverlapTrigger", "overlapTrigger"],
+          targetOffsetX: ["mdePopoverOffsetX", "targetOffsetX"],
+          targetOffsetY: ["mdePopoverOffsetY", "targetOffsetY"],
+          arrowOffsetX: ["mdePopoverArrowOffsetX", "arrowOffsetX"],
+          arrowWidth: ["mdePopoverArrowWidth", "arrowWidth"],
+          arrowColor: ["mdePopoverArrowColor", "arrowColor"],
+          closeOnClick: ["mdePopoverCloseOnClick", "closeOnClick"]
+        },
+        outputs: {
+          opened: "opened",
+          closed: "closed"
+        },
+        exportAs: ["mdePopoverTrigger"]
+      });
+
+      MdePopoverTrigger.ctorParameters = function () {
+        return [{
+          type: _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_3__["Overlay"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]
+        }, {
+          type: _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"],
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"]
+          }]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
+        }];
+      };
+
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"])('attr.aria-haspopup')], MdePopoverTrigger.prototype, "ariaHaspopup", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverTriggerFor')], MdePopoverTrigger.prototype, "popover", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverTargetAt')], MdePopoverTrigger.prototype, "targetElement", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverPositionX')], MdePopoverTrigger.prototype, "positionX", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverPositionY')], MdePopoverTrigger.prototype, "positionY", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverTriggerOn')], MdePopoverTrigger.prototype, "triggerEvent", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverEnterDelay')], MdePopoverTrigger.prototype, "enterDelay", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverLeaveDelay')], MdePopoverTrigger.prototype, "leaveDelay", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverOverlapTrigger')], MdePopoverTrigger.prototype, "overlapTrigger", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverOffsetX')], MdePopoverTrigger.prototype, "targetOffsetX", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverOffsetY')], MdePopoverTrigger.prototype, "targetOffsetY", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverArrowOffsetX')], MdePopoverTrigger.prototype, "arrowOffsetX", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverArrowWidth')], MdePopoverTrigger.prototype, "arrowWidth", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverArrowColor')], MdePopoverTrigger.prototype, "arrowColor", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverCloseOnClick')], MdePopoverTrigger.prototype, "closeOnClick", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('mdePopoverBackdropCloseOnClick')], MdePopoverTrigger.prototype, "backdropCloseOnClick", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()], MdePopoverTrigger.prototype, "opened", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()], MdePopoverTrigger.prototype, "closed", void 0);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('click', ['$event'])], MdePopoverTrigger.prototype, "onClick", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('mouseenter', ['$event'])], MdePopoverTrigger.prototype, "onMouseEnter", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('mouseleave', ['$event'])], MdePopoverTrigger.prototype, "onMouseLeave", null);
+      Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('mousedown', ['$event'])], MdePopoverTrigger.prototype, "_handleMousedown", null);
+      MdePopoverTrigger = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"])())], MdePopoverTrigger);
+
+      var MdePopoverTarget = function MdePopoverTarget(_elementRef) {
+        _classCallCheck(this, MdePopoverTarget);
+
+        this._elementRef = _elementRef;
+      };
+
+      MdePopoverTarget.ɵfac = function MdePopoverTarget_Factory(t) {
+        return new (t || MdePopoverTarget)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]));
+      };
+
+      MdePopoverTarget.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+        type: MdePopoverTarget,
+        selectors: [["mde-popover-target"], ["", "mdePopoverTarget", ""]],
+        exportAs: ["mdePopoverTarget"]
+      });
+
+      MdePopoverTarget.ctorParameters = function () {
+        return [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+        }];
+      };
+
+      var MdePopoverModule = function MdePopoverModule() {
+        _classCallCheck(this, MdePopoverModule);
+      };
+
+      MdePopoverModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
+        type: MdePopoverModule
+      });
+      MdePopoverModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
+        factory: function MdePopoverModule_Factory(t) {
+          return new (t || MdePopoverModule)();
+        },
+        imports: [[_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_3__["OverlayModule"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_7__["A11yModule"]]]
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](MdePopover, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+          args: [{
+            selector: 'mde-popover',
+            template: "<ng-template>\n  <div class=\"mde-popover-panel\" role=\"dialog\" [class.mde-popover-overlap]=\"overlapTrigger\"\n       [ngClass]=\"_classList\" [ngStyle]=\"popoverPanelStyles\" (keydown)=\"_handleKeydown($event)\"\n       (click)=\"onClick()\" (mouseover)=\"onMouseOver()\" (mouseleave)=\"onMouseLeave()\" [@.disabled]=\"disableAnimation\"\n       [@transformPopover]=\"'enter'\">\n    <div class=\"mde-popover-direction-arrow\" [ngStyle]=\"popoverArrowStyles\" *ngIf=\"!overlapTrigger\"></div>\n    <div class=\"mde-popover-content\" [ngStyle]=\"popoverContentStyles\" [cdkTrapFocus]=\"focusTrapEnabled\" [cdkTrapFocusAutoCapture]=\"focusTrapAutoCaptureEnabled\">\n      <ng-content></ng-content>\n    </div>\n  </div>\n</ng-template>\n",
+            changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectionStrategy"].OnPush,
+            encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
+            animations: [transformPopover],
+            exportAs: 'mdePopover',
+            styles: [".mde-popover-panel{display:flex;flex-direction:column;max-height:calc(100vh + 48px)}.mde-popover-ripple{position:absolute;top:0;left:0;bottom:0;right:0}.mde-popover-below .mde-popover-direction-arrow{position:absolute;bottom:0;width:0;height:0;border-bottom-width:0!important;z-index:99999}.mde-popover-above .mde-popover-direction-arrow{position:absolute;top:0;width:0;height:0;border-top-width:0!important;z-index:99999}.mde-popover-after .mde-popover-direction-arrow{left:20px}.mde-popover-before .mde-popover-direction-arrow{right:20px}"]
+          }]
+        }], function () {
+          return [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+          }];
+        }, {
+          role: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"],
+            args: ['attr.role']
+          }],
+          close: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+          }],
+          positionX: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverPositionX']
+          }],
+          positionY: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverPositionY']
+          }],
+          triggerEvent: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverTriggerOn']
+          }],
+          enterDelay: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverEnterDelay']
+          }],
+          leaveDelay: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverLeaveDelay']
+          }],
+          overlapTrigger: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverOverlapTrigger']
+          }],
+          targetOffsetX: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverOffsetX']
+          }],
+          targetOffsetY: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverOffsetY']
+          }],
+          arrowOffsetX: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverArrowOffsetX']
+          }],
+          arrowWidth: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverArrowWidth']
+          }],
+          arrowColor: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverArrowColor']
+          }],
+          closeOnClick: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverCloseOnClick']
+          }],
+          disableAnimation: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverDisableAnimation']
+          }],
+          focusTrapEnabled: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdeFocusTrapEnabled']
+          }],
+          focusTrapAutoCaptureEnabled: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdeFocusTrapAutoCaptureEnabled']
+          }],
+          panelClass: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['class']
+          }],
+          classList: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          templateRef: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
+            args: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"]]
+          }]
+        });
+      })();
+      /*@__PURE__*/
+
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](MdePopoverTrigger, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+          args: [{
+            selector: '[mdePopoverTriggerFor]',
+            exportAs: 'mdePopoverTrigger'
+          }]
+        }], function () {
+          return [{
+            type: _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_3__["Overlay"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]
+          }, {
+            type: _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_8__["Directionality"],
+            decorators: [{
+              type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Optional"]
+            }]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
+          }];
+        }, {
+          ariaHaspopup: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"],
+            args: ['attr.aria-haspopup']
+          }],
+          backdropCloseOnClick: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverBackdropCloseOnClick']
+          }],
+          opened: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+          }],
+          closed: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+          }],
+          onClick: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
+            args: ['click', ['$event']]
+          }],
+          onMouseEnter: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
+            args: ['mouseenter', ['$event']]
+          }],
+          onMouseLeave: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
+            args: ['mouseleave', ['$event']]
+          }],
+          _handleMousedown: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
+            args: ['mousedown', ['$event']]
+          }],
+          popover: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverTriggerFor']
+          }],
+          targetElement: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverTargetAt']
+          }],
+          positionX: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverPositionX']
+          }],
+          positionY: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverPositionY']
+          }],
+          triggerEvent: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverTriggerOn']
+          }],
+          enterDelay: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverEnterDelay']
+          }],
+          leaveDelay: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverLeaveDelay']
+          }],
+          overlapTrigger: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverOverlapTrigger']
+          }],
+          targetOffsetX: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverOffsetX']
+          }],
+          targetOffsetY: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverOffsetY']
+          }],
+          arrowOffsetX: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverArrowOffsetX']
+          }],
+          arrowWidth: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverArrowWidth']
+          }],
+          arrowColor: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverArrowColor']
+          }],
+          closeOnClick: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"],
+            args: ['mdePopoverCloseOnClick']
+          }]
+        });
+      })();
+      /*@__PURE__*/
+
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](MdePopoverTarget, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+          args: [{
+            selector: 'mde-popover-target, [mdePopoverTarget]',
+            exportAs: 'mdePopoverTarget'
+          }]
+        }], function () {
+          return [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+          }];
+        }, null);
+      })();
+
+      (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](MdePopoverModule, {
+          declarations: function declarations() {
+            return [MdePopover, MdePopoverTrigger, MdePopoverTarget];
+          },
+          imports: function imports() {
+            return [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_3__["OverlayModule"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_7__["A11yModule"]];
+          },
+          exports: function exports() {
+            return [MdePopover, MdePopoverTrigger, MdePopoverTarget];
+          }
+        });
+      })();
+      /*@__PURE__*/
+
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](MdePopoverModule, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
+          args: [{
+            imports: [_angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_3__["OverlayModule"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_7__["A11yModule"]],
+            exports: [MdePopover, MdePopoverTrigger, MdePopoverTarget],
+            declarations: [MdePopover, MdePopoverTrigger, MdePopoverTarget]
+          }]
+        }], null, null);
+      })();
+      /*
+       * Public API Surface of mde
+       */
+
+      /**
+       * Generated bundle index. Do not edit.
+       */
+      //# sourceMappingURL=material-extended-mde.js.map
+
+      /***/
+
+    },
+
     /***/
     "CC78":
     /*!*****************************************************!*\
@@ -133,6 +1706,30 @@
       var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @angular/material/checkbox */
       "pMoy");
+      /* harmony import */
+
+
+      var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      /*! @angular/material/dialog */
+      "0IaG");
+      /* harmony import */
+
+
+      var _material_extended_mde__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      /*! @material-extended/mde */
+      "+9r9");
+      /* harmony import */
+
+
+      var _components_team_totals_team_totals_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+      /*! ./components/team-totals/team-totals.component */
+      "aXR3");
+      /* harmony import */
+
+
+      var _components_unit_details_card_unit_details_card_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+      /*! ./components/unit-details-card/unit-details-card.component */
+      "TrFZ");
 
       var TeamBuilderModule = function TeamBuilderModule() {
         _classCallCheck(this, TeamBuilderModule);
@@ -145,13 +1742,13 @@
         factory: function TeamBuilderModule_Factory(t) {
           return new (t || TeamBuilderModule)();
         },
-        imports: [[_shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"], _team_builder_routing_module__WEBPACK_IMPORTED_MODULE_3__["TeamBuilderRoutingModule"], _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_1__["MatGridListModule"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_2__["MatSliderModule"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_2__["MatSliderModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_8__["MatInputModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ReactiveFormsModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_11__["MatPaginatorModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_12__["MatCheckboxModule"]]]
+        imports: [[_shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"], _team_builder_routing_module__WEBPACK_IMPORTED_MODULE_3__["TeamBuilderRoutingModule"], _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_1__["MatGridListModule"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_2__["MatSliderModule"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_2__["MatSliderModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_8__["MatInputModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ReactiveFormsModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_11__["MatPaginatorModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_12__["MatCheckboxModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_13__["MatDialogModule"], _material_extended_mde__WEBPACK_IMPORTED_MODULE_14__["MdePopoverModule"]]]
       });
 
       (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](TeamBuilderModule, {
-          declarations: [_pages_team_builder_team_builder_component__WEBPACK_IMPORTED_MODULE_4__["TeamBuilderComponent"], _components_unit_card_unit_card_component__WEBPACK_IMPORTED_MODULE_6__["UnitCardComponent"], _components_unit_picker_unit_picker_component__WEBPACK_IMPORTED_MODULE_7__["UnitPickerComponent"]],
-          imports: [_shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"], _team_builder_routing_module__WEBPACK_IMPORTED_MODULE_3__["TeamBuilderRoutingModule"], _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_1__["MatGridListModule"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_2__["MatSliderModule"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_2__["MatSliderModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_8__["MatInputModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ReactiveFormsModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_11__["MatPaginatorModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_12__["MatCheckboxModule"]]
+          declarations: [_pages_team_builder_team_builder_component__WEBPACK_IMPORTED_MODULE_4__["TeamBuilderComponent"], _components_unit_card_unit_card_component__WEBPACK_IMPORTED_MODULE_6__["UnitCardComponent"], _components_unit_picker_unit_picker_component__WEBPACK_IMPORTED_MODULE_7__["UnitPickerComponent"], _components_team_totals_team_totals_component__WEBPACK_IMPORTED_MODULE_15__["TeamTotalsComponent"], _components_unit_details_card_unit_details_card_component__WEBPACK_IMPORTED_MODULE_16__["UnitDetailsCardComponent"]],
+          imports: [_shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"], _team_builder_routing_module__WEBPACK_IMPORTED_MODULE_3__["TeamBuilderRoutingModule"], _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_1__["MatGridListModule"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_2__["MatSliderModule"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_2__["MatSliderModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_8__["MatInputModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ReactiveFormsModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_11__["MatPaginatorModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_12__["MatCheckboxModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_13__["MatDialogModule"], _material_extended_mde__WEBPACK_IMPORTED_MODULE_14__["MdePopoverModule"]]
         });
       })();
       /*@__PURE__*/
@@ -161,8 +1758,8 @@
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TeamBuilderModule, [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
           args: [{
-            declarations: [_pages_team_builder_team_builder_component__WEBPACK_IMPORTED_MODULE_4__["TeamBuilderComponent"], _components_unit_card_unit_card_component__WEBPACK_IMPORTED_MODULE_6__["UnitCardComponent"], _components_unit_picker_unit_picker_component__WEBPACK_IMPORTED_MODULE_7__["UnitPickerComponent"]],
-            imports: [_shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"], _team_builder_routing_module__WEBPACK_IMPORTED_MODULE_3__["TeamBuilderRoutingModule"], _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_1__["MatGridListModule"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_2__["MatSliderModule"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_2__["MatSliderModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_8__["MatInputModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ReactiveFormsModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_11__["MatPaginatorModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_12__["MatCheckboxModule"]]
+            declarations: [_pages_team_builder_team_builder_component__WEBPACK_IMPORTED_MODULE_4__["TeamBuilderComponent"], _components_unit_card_unit_card_component__WEBPACK_IMPORTED_MODULE_6__["UnitCardComponent"], _components_unit_picker_unit_picker_component__WEBPACK_IMPORTED_MODULE_7__["UnitPickerComponent"], _components_team_totals_team_totals_component__WEBPACK_IMPORTED_MODULE_15__["TeamTotalsComponent"], _components_unit_details_card_unit_details_card_component__WEBPACK_IMPORTED_MODULE_16__["UnitDetailsCardComponent"]],
+            imports: [_shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"], _team_builder_routing_module__WEBPACK_IMPORTED_MODULE_3__["TeamBuilderRoutingModule"], _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_1__["MatGridListModule"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_2__["MatSliderModule"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_2__["MatSliderModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_8__["MatInputModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ReactiveFormsModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_11__["MatPaginatorModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_12__["MatCheckboxModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_13__["MatDialogModule"], _material_extended_mde__WEBPACK_IMPORTED_MODULE_14__["MdePopoverModule"]]
           }]
         }], null, null);
       })();
@@ -210,93 +1807,181 @@
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _material_extended_mde__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @material-extended/mde */
+      "+9r9");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! @angular/common */
       "ofXK");
+      /* harmony import */
 
-      function UnitCardComponent_mat_card_content_3_Template(rf, ctx) {
+
+      var _unit_details_card_unit_details_card_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! ../unit-details-card/unit-details-card.component */
+      "TrFZ");
+
+      function UnitCardComponent_section_4_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-card-content");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "section", 6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "section", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 7);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 5);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 9);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "img", 7);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 4);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 5);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 6);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](11, "img", 8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "img", 10);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 7);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 6);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](16, "img", 9);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 9);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 4);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 5);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div", 6);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "img", 10);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "img", 11);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 7);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "img", 12);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div", 6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](26, "img", 11);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](20, "img", 13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "div", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](25, "img", 14);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](30, "img", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](35, "img", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "div", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](40, "img", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "div", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](45, "img", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](48);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "div", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](50, "img", 19);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -308,7 +1993,7 @@
         if (rf & 2) {
           var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.buffs.hp);
 
@@ -327,6 +2012,38 @@
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.buffs.spd);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.buffs.ct);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.buffs.crit);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.buffs.guard);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.buffs.miss);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.buffs.blow);
+        }
+      }
+
+      function UnitCardComponent_app_unit_details_card_7_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-unit-details-card", 20);
+        }
+
+        if (rf & 2) {
+          var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("unit", ctx_r2.unit);
         }
       }
 
@@ -347,52 +2064,105 @@
               atk: 0,
               def: 0,
               rcv: 0,
-              spd: 0
+              spd: 0,
+              ct: 0,
+              crit: 0,
+              guard: 0,
+              miss: 0,
+              blow: 0
             };
           }
         }, {
           key: "updateBuffs",
-          value: function updateBuffs(teamEffects) {
-            var _this = this;
+          value: function updateBuffs() {
+            var _this6 = this;
 
             this.resetBuffs();
-            teamEffects.forEach(function (e) {
-              var applies = Object(_core_utils_effects__WEBPACK_IMPORTED_MODULE_1__["buffAppliesToUnit"])(e, _this.unit);
 
-              if (!applies) {
-                return;
+            this._teamEffects.forEach(function (e) {
+              if (Object(_core_utils_effects__WEBPACK_IMPORTED_MODULE_1__["buffAppliesToUnit"])(e, _this6.unit)) {
+                _this6.applyBuff(e);
               }
+            });
 
-              e.attributes.forEach(function (a) {
-                switch (a) {
-                  case 'HP':
-                    _this.buffs.hp += e.level;
-                    break;
+            this.applySelfBuffs();
+          }
+        }, {
+          key: "applySelfBuffs",
+          value: function applySelfBuffs() {
+            var _this7 = this;
 
-                  case 'ATK':
-                    _this.buffs.atk += e.level;
-                    break;
+            if (!this.unit) {
+              return;
+            }
 
-                  case 'DEF':
-                    _this.buffs.def += e.level;
-                    break;
+            this.unit.lvl5Ability.filter(function (e) {
+              var _a, _b;
 
-                  case 'RCV':
-                    _this.buffs.rcv += e.level;
-                    break;
+              return ((_b = (_a = e === null || e === void 0 ? void 0 : e.targeting) === null || _a === void 0 ? void 0 : _a.targets) === null || _b === void 0 ? void 0 : _b.some(function (t) {
+                return t === 'self';
+              })) && Object(_core_utils_effects__WEBPACK_IMPORTED_MODULE_1__["buffAppliesToTime"])(e, _this7._battleTimer);
+            }).forEach(function (e) {
+              _this7.applyBuff(e);
+            });
+          }
+        }, {
+          key: "applyBuff",
+          value: function applyBuff(e) {
+            var _this8 = this;
 
-                  case 'SPD':
-                    _this.buffs.spd += e.level;
-                    break;
-                }
-              });
+            if (!e || !e.attributes) {
+              return;
+            }
+
+            console.log('applying effect to ' + this.unit.name, e);
+            e.attributes.forEach(function (a) {
+              switch (a) {
+                case 'HP':
+                  _this8.buffs.hp += e.level;
+                  break;
+
+                case 'ATK':
+                  _this8.buffs.atk += e.level;
+                  break;
+
+                case 'DEF':
+                  _this8.buffs.def += e.level;
+                  break;
+
+                case 'RCV':
+                  _this8.buffs.rcv += e.level;
+                  break;
+
+                case 'SPD':
+                  _this8.buffs.spd += e.level;
+                  break;
+
+                case 'Special CT':
+                  _this8.buffs.ct += e.level;
+                  break;
+
+                case 'Critical Hit':
+                  _this8.buffs.crit += e.level;
+                  break;
+
+                case 'Guard':
+                  _this8.buffs.guard += e.level;
+                  break;
+
+                case 'Blow Away':
+                  _this8.buffs.blow += e.level;
+                  break;
+
+                case 'Accuracy':
+                  _this8.buffs.miss += e.level;
+                  break;
+              }
             });
           }
         }, {
           key: "ngOnInit",
-          value: function ngOnInit() {
-            console.log('unit', this.unit);
-          }
+          value: function ngOnInit() {}
         }, {
           key: "onClick",
           value: function onClick() {
@@ -401,7 +2171,17 @@
         }, {
           key: "teamEffects",
           set: function set(value) {
-            this.updateBuffs(value);
+            this._teamEffects = value;
+            this.updateBuffs();
+          }
+        }, {
+          key: "battleTimer",
+          get: function get() {
+            return this._battleTimer;
+          },
+          set: function set(value) {
+            this._battleTimer = value;
+            this.updateBuffs();
           }
         }]);
 
@@ -417,14 +2197,15 @@
         selectors: [["app-unit-card"]],
         inputs: {
           unit: "unit",
-          teamEffects: "teamEffects"
+          teamEffects: "teamEffects",
+          battleTimer: "battleTimer"
         },
         outputs: {
           unitClick: "unitClick"
         },
-        decls: 4,
-        vars: 2,
-        consts: [[1, "unit-image-container", 3, "click"], ["mat-card-image", "", "alt", "unit", 1, "unit-image", 3, "src"], [4, "ngIf"], [1, "buffs"], [1, "buff-container"], [1, "buff-value"], [1, "buff-key"], ["src", "assets/images/pirates_arena_strength_up.png", "alt", "HP"], ["src", "assets/images/pirates_arena_attack_up.png", "alt", "ATK"], ["src", "assets/images/pirates_arena_defence_up.png", "alt", "DEF"], ["src", "assets/images/pirates_arena_cure_up.png", "alt", "RCV"], ["src", "assets/images/pirates_arena_speed_up.png", "alt", "SPD"]],
+        decls: 8,
+        vars: 5,
+        consts: [[1, "unit-image-container", 3, "mdePopoverTriggerFor", "click"], ["mat-card-image", "", "alt", "unit", 1, "unit-image", 3, "src"], ["class", "buffs", 4, "ngIf"], ["mdePopoverPositionX", "after", 3, "mdePopoverOverlapTrigger"], ["unitPopover", "mdePopover"], [3, "unit", 4, "ngIf"], [1, "buffs"], [1, "buff-container"], [1, "buff-value"], [1, "buff-key"], ["src", "assets/images/pirates_arena_strength_up.png", "alt", "HP"], ["src", "assets/images/pirates_arena_attack_up.png", "alt", "ATK"], ["src", "assets/images/pirates_arena_defence_up.png", "alt", "DEF"], ["src", "assets/images/pirates_arena_cure_up.png", "alt", "RCV"], ["src", "assets/images/pirates_arena_speed_up.png", "alt", "SPD"], ["src", "assets/images/pirates_arena_SP_speed_up.png", "alt", "CT"], ["src", "assets/images/pirates_arena_critical_up.png", "alt", "CRIT"], ["src", "assets/images/pirates_arena_guard_up.png", "alt", "CRIT"], ["src", "assets/images/pirates_arena_miss_up.png", "alt", "CRIT"], ["src", "assets/images/pirates_arena_KnockBack_up.png", "alt", "CRIT"], [3, "unit"]],
         template: function UnitCardComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-card");
@@ -439,23 +2220,47 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, UnitCardComponent_mat_card_content_3_Template, 27, 5, "mat-card-content", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "mat-card-content");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, UnitCardComponent_section_4_Template, 51, 10, "section", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "mde-popover", 3, 4);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, UnitCardComponent_app_unit_details_card_7_Template, 1, 1, "app-unit-details-card", 5);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
           }
 
           if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx.unit != null ? ctx.unit.thumbnailUrl : ctx.defaultImage, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+            var _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](6);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("mdePopoverTriggerFor", _r1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx.unit != null ? ctx.unit.thumbnailUrl : ctx.defaultImage, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.unit != null);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("mdePopoverOverlapTrigger", false);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.unit);
           }
         },
-        directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCardImage"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCardContent"]],
-        styles: [".unit-image-container[_ngcontent-%COMP%] {\r\n  cursor: pointer;\r\n  width: 125px;\r\n}\r\n\r\n.buffs[_ngcontent-%COMP%] {\r\n  display: flex;\r\n}\r\n\r\n.buff-container[_ngcontent-%COMP%] {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.buff-key[_ngcontent-%COMP%] {\r\n  width: 30px;\r\n}\r\n\r\n.buff-key[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\r\n  width: 100%;\r\n}\r\n\r\n.buff-value[_ngcontent-%COMP%] {\r\n  text-align: center;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhbS1idWlsZGVyL2NvbXBvbmVudHMvdW5pdC1jYXJkL3VuaXQtY2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBZTtFQUNmLFlBQVk7QUFDZDs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLGFBQWE7RUFDYixzQkFBc0I7QUFDeEI7O0FBRUE7RUFDRSxXQUFXO0FBQ2I7O0FBRUE7RUFDRSxXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEIiLCJmaWxlIjoic3JjL2FwcC90ZWFtLWJ1aWxkZXIvY29tcG9uZW50cy91bml0LWNhcmQvdW5pdC1jYXJkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudW5pdC1pbWFnZS1jb250YWluZXIge1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxuICB3aWR0aDogMTI1cHg7XHJcbn1cclxuXHJcbi5idWZmcyB7XHJcbiAgZGlzcGxheTogZmxleDtcclxufVxyXG5cclxuLmJ1ZmYtY29udGFpbmVyIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbn1cclxuXHJcbi5idWZmLWtleSB7XHJcbiAgd2lkdGg6IDMwcHg7XHJcbn1cclxuXHJcbi5idWZmLWtleSBpbWcge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4uYnVmZi12YWx1ZSB7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59Il19 */"]
+        directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCard"], _material_extended_mde__WEBPACK_IMPORTED_MODULE_3__["MdePopoverTrigger"], _angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCardImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCardContent"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _material_extended_mde__WEBPACK_IMPORTED_MODULE_3__["MdePopover"], _unit_details_card_unit_details_card_component__WEBPACK_IMPORTED_MODULE_5__["UnitDetailsCardComponent"]],
+        styles: [".unit-image-container[_ngcontent-%COMP%] {\r\n  cursor: pointer;\r\n  min-height: 180px;\r\n}\r\n\r\n.mat-card-content[_ngcontent-%COMP%] {\r\n  min-width: calc(30px * 5); \r\n  min-height: 112px;\r\n}\r\n\r\n.buffs[_ngcontent-%COMP%] {\r\n  max-width: calc(30px * 5); \r\n  display: flex;\r\n  flex-wrap: wrap;\r\n}\r\n\r\n.buff-container[_ngcontent-%COMP%] {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.buff-key[_ngcontent-%COMP%] {\r\n  width: 30px;\r\n}\r\n\r\n.buff-key[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\r\n  width: 100%;\r\n}\r\n\r\n.buff-value[_ngcontent-%COMP%] {\r\n  text-align: center;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhbS1idWlsZGVyL2NvbXBvbmVudHMvdW5pdC1jYXJkL3VuaXQtY2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLHlCQUF5QixFQUFFLDRCQUE0QjtFQUN2RCxpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSx5QkFBeUIsRUFBRSw0QkFBNEI7RUFDdkQsYUFBYTtFQUNiLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxhQUFhO0VBQ2Isc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0UsV0FBVztBQUNiOztBQUVBO0VBQ0UsV0FBVztBQUNiOztBQUVBO0VBQ0Usa0JBQWtCO0FBQ3BCIiwiZmlsZSI6InNyYy9hcHAvdGVhbS1idWlsZGVyL2NvbXBvbmVudHMvdW5pdC1jYXJkL3VuaXQtY2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnVuaXQtaW1hZ2UtY29udGFpbmVyIHtcclxuICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgbWluLWhlaWdodDogMTgwcHg7XHJcbn1cclxuXHJcbi5tYXQtY2FyZC1jb250ZW50IHtcclxuICBtaW4td2lkdGg6IGNhbGMoMzBweCAqIDUpOyAvKiBkaXNwbGF5IDUgYnVmZnMgcGVyIHJvdyAqL1xyXG4gIG1pbi1oZWlnaHQ6IDExMnB4O1xyXG59XHJcblxyXG4uYnVmZnMge1xyXG4gIG1heC13aWR0aDogY2FsYygzMHB4ICogNSk7IC8qIGRpc3BsYXkgNSBidWZmcyBwZXIgcm93ICovXHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LXdyYXA6IHdyYXA7XHJcbn1cclxuXHJcbi5idWZmLWNvbnRhaW5lciB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG59XHJcblxyXG4uYnVmZi1rZXkge1xyXG4gIHdpZHRoOiAzMHB4O1xyXG59XHJcblxyXG4uYnVmZi1rZXkgaW1nIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLmJ1ZmYtdmFsdWUge1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxufSJdfQ== */"]
       });
       /*@__PURE__*/
 
@@ -474,6 +2279,9 @@
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
           }],
           teamEffects: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+          }],
+          battleTimer: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
           }],
           unitClick: [{
@@ -565,6 +2373,379 @@
     },
 
     /***/
+    "TrFZ":
+    /*!******************************************************************************************!*\
+      !*** ./src/app/team-builder/components/unit-details-card/unit-details-card.component.ts ***!
+      \******************************************************************************************/
+
+    /*! exports provided: UnitDetailsCardComponent */
+
+    /***/
+    function TrFZ(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "UnitDetailsCardComponent", function () {
+        return UnitDetailsCardComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+      /* harmony import */
+
+
+      var src_app_core_utils_images__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/app/core/utils/images */
+      "vy+p");
+      /* harmony import */
+
+
+      var _angular_material_card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/material/card */
+      "Wp6s");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/common */
+      "ofXK");
+      /* harmony import */
+
+
+      var _shared_pipes_effect_pipe__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! ../../../shared/pipes/effect.pipe */
+      "JMoW");
+
+      function UnitDetailsCardComponent_img_5_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "img", 4);
+        }
+
+        if (rf & 2) {
+          var attribute_r4 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", attribute_r4.img, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"])("alt", attribute_r4.desc);
+        }
+      }
+
+      function UnitDetailsCardComponent_span_10_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "span", 5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](1, "effect");
+        }
+
+        if (rf & 2) {
+          var effect_r5 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHtml", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](1, 1, effect_r5), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+        }
+      }
+
+      function UnitDetailsCardComponent_span_14_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "span", 5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](1, "effect");
+        }
+
+        if (rf & 2) {
+          var effect_r6 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHtml", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](1, 1, effect_r6), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+        }
+      }
+
+      function UnitDetailsCardComponent_section_15_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "section", 6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "h3");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Stats");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "HP");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "span", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "ATK");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "span", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "span", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "DEF");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "span", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "span", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "RCV");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "span", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "span", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "SPD");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "span", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r3.unit.stats.hp);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r3.unit.stats.atk);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r3.unit.stats.def);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r3.unit.stats.rcv);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r3.unit.stats.spd);
+        }
+      }
+
+      var UnitDetailsCardComponent = /*#__PURE__*/function () {
+        function UnitDetailsCardComponent() {
+          _classCallCheck(this, UnitDetailsCardComponent);
+
+          this.attributes = [];
+        }
+
+        _createClass(UnitDetailsCardComponent, [{
+          key: "setAttributes",
+          value: function setAttributes(unit) {
+            if (!unit.stats) {
+              this.attributes = [];
+              return;
+            }
+
+            this.attributes = [{
+              img: Object(src_app_core_utils_images__WEBPACK_IMPORTED_MODULE_1__["typeImage"])(unit.stats.type),
+              desc: unit.stats.type
+            }, {
+              img: Object(src_app_core_utils_images__WEBPACK_IMPORTED_MODULE_1__["classImage"])(unit.stats.class1),
+              desc: unit.stats.class1
+            }];
+
+            if (unit.stats.class2) {
+              this.attributes.push({
+                img: Object(src_app_core_utils_images__WEBPACK_IMPORTED_MODULE_1__["classImage"])(unit.stats.class2),
+                desc: unit.stats.class2
+              });
+            }
+          }
+        }, {
+          key: "ngOnInit",
+          value: function ngOnInit() {}
+        }, {
+          key: "unit",
+          get: function get() {
+            return this._unit;
+          },
+          set: function set(value) {
+            this._unit = value;
+            this.setAttributes(value);
+          }
+        }]);
+
+        return UnitDetailsCardComponent;
+      }();
+
+      UnitDetailsCardComponent.ɵfac = function UnitDetailsCardComponent_Factory(t) {
+        return new (t || UnitDetailsCardComponent)();
+      };
+
+      UnitDetailsCardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+        type: UnitDetailsCardComponent,
+        selectors: [["app-unit-details-card"]],
+        inputs: {
+          unit: "unit"
+        },
+        decls: 16,
+        vars: 6,
+        consts: [[1, "mat-card-header"], ["width", "48", "height", "48", 3, "src", "alt", 4, "ngFor", "ngForOf"], [3, "innerHtml", 4, "ngFor", "ngForOf"], ["class", "stats", 4, "ngIf"], ["width", "48", "height", "48", 3, "src", "alt"], [3, "innerHtml"], [1, "stats"], [1, "stat-container"], [1, "stat-key"], [1, "stat-value"]],
+        template: function UnitDetailsCardComponent_Template(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-card");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h2");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, UnitDetailsCardComponent_img_5_Template, 1, 2, "img", 1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "mat-card-content");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "h3");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "Ability");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "ul");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, UnitDetailsCardComponent_span_10_Template, 2, 3, "span", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "h3");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "ul");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, UnitDetailsCardComponent_span_14_Template, 2, 3, "span", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, UnitDetailsCardComponent_section_15_Template, 28, 5, "section", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          }
+
+          if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.unit.name);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.attributes);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.unit.lvl5Ability);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Special (CT ", ctx.unit.lvl10Cooldown, ")");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.unit.lvl10Special);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.unit.stats);
+          }
+        },
+        directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCard"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _angular_material_card__WEBPACK_IMPORTED_MODULE_2__["MatCardContent"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"]],
+        pipes: [_shared_pipes_effect_pipe__WEBPACK_IMPORTED_MODULE_4__["EffectPipe"]],
+        styles: [".mat-card-header[_ngcontent-%COMP%] {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.stats[_ngcontent-%COMP%] {\r\n  width: 50%;\r\n}\r\n\r\n.stat-container[_ngcontent-%COMP%] {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhbS1idWlsZGVyL2NvbXBvbmVudHMvdW5pdC1kZXRhaWxzLWNhcmQvdW5pdC1kZXRhaWxzLWNhcmQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQWE7RUFDYiw4QkFBOEI7QUFDaEM7O0FBRUE7RUFDRSxVQUFVO0FBQ1o7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsOEJBQThCO0FBQ2hDIiwiZmlsZSI6InNyYy9hcHAvdGVhbS1idWlsZGVyL2NvbXBvbmVudHMvdW5pdC1kZXRhaWxzLWNhcmQvdW5pdC1kZXRhaWxzLWNhcmQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYXQtY2FyZC1oZWFkZXIge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG59XHJcblxyXG4uc3RhdHMge1xyXG4gIHdpZHRoOiA1MCU7XHJcbn1cclxuXHJcbi5zdGF0LWNvbnRhaW5lciB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XHJcbn0iXX0= */"]
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](UnitDetailsCardComponent, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+          args: [{
+            selector: 'app-unit-details-card',
+            templateUrl: './unit-details-card.component.html',
+            styleUrls: ['./unit-details-card.component.css']
+          }]
+        }], function () {
+          return [];
+        }, {
+          unit: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+          }]
+        });
+      })();
+      /***/
+
+    },
+
+    /***/
     "Yqml":
     /*!******************************************!*\
       !*** ./src/app/core/constants/battle.ts ***!
@@ -590,6 +2771,122 @@
 
       var battleTime = 100;
       /***/
+    },
+
+    /***/
+    "aXR3":
+    /*!******************************************************************************!*\
+      !*** ./src/app/team-builder/components/team-totals/team-totals.component.ts ***!
+      \******************************************************************************/
+
+    /*! exports provided: TeamTotalsComponent */
+
+    /***/
+    function aXR3(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "TeamTotalsComponent", function () {
+        return TeamTotalsComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+      /* harmony import */
+
+
+      var _angular_material_card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/material/card */
+      "Wp6s");
+
+      var TeamTotalsComponent = /*#__PURE__*/function () {
+        function TeamTotalsComponent() {
+          _classCallCheck(this, TeamTotalsComponent);
+        }
+
+        _createClass(TeamTotalsComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {}
+        }]);
+
+        return TeamTotalsComponent;
+      }();
+
+      TeamTotalsComponent.ɵfac = function TeamTotalsComponent_Factory(t) {
+        return new (t || TeamTotalsComponent)();
+      };
+
+      TeamTotalsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+        type: TeamTotalsComponent,
+        selectors: [["app-team-totals"]],
+        inputs: {
+          totals: "totals"
+        },
+        decls: 7,
+        vars: 1,
+        consts: [[1, "team-totals"], [1, "team-total-item"], [1, "team-total-item-desc"], [1, "team-total-item-value"]],
+        template: function TeamTotalsComponent_Template(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-card", 0);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-card-content");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "span", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Cost");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "span", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          }
+
+          if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.totals.cost);
+          }
+        },
+        directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_1__["MatCardContent"]],
+        styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RlYW0tYnVpbGRlci9jb21wb25lbnRzL3RlYW0tdG90YWxzL3RlYW0tdG90YWxzLmNvbXBvbmVudC5jc3MifQ== */"]
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TeamTotalsComponent, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+          args: [{
+            selector: 'app-team-totals',
+            templateUrl: './team-totals.component.html',
+            styleUrls: ['./team-totals.component.css']
+          }]
+        }], function () {
+          return [];
+        }, {
+          totals: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+          }]
+        });
+      })();
+      /***/
+
     },
 
     /***/
@@ -645,6 +2942,10 @@
       };
 
       var buffAppliesToUnit = function buffAppliesToUnit(effect, unit) {
+        if (!unit || !effect) {
+          return false;
+        }
+
         if (effect.effect !== 'buff') {
           return false;
         }
@@ -658,7 +2959,7 @@
         }
 
         return effect.targeting.targets.some(function (t) {
-          return t === 'crew' || t === 'self' || unit.stats && t === unit.stats.class1 || unit.stats && t === unit.stats.class2 || t === "[".concat(unit.stats.type, "]");
+          return t === 'crew' || unit.stats && (t === unit.stats.class1 || t === unit.stats.class2 || t === "[".concat(unit.stats.type, "]"));
         });
       };
       /***/
@@ -705,76 +3006,102 @@
       /* harmony import */
 
 
-      var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _angular_material_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/material/button */
+      "bTqV");
+      /* harmony import */
+
+
+      var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! @angular/material/form-field */
       "kmnG");
       /* harmony import */
 
 
-      var _angular_material_input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _angular_material_input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! @angular/material/input */
       "qFsG");
       /* harmony import */
 
 
-      var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/forms */
       "3Pt+");
       /* harmony import */
 
 
-      var _shared_components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var _shared_components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! ../../../shared/components/type-picker/type-picker.component */
       "wpUN");
       /* harmony import */
 
 
-      var _shared_components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var _shared_components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! ../../../shared/components/class-picker/class-picker.component */
       "30Z1");
       /* harmony import */
 
 
-      var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! @angular/material/checkbox */
       "pMoy");
       /* harmony import */
 
 
-      var _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! @angular/flex-layout/flex */
       "XiUz");
       /* harmony import */
 
 
-      var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/material/paginator */
       "M9IT");
       /* harmony import */
 
 
-      var _shared_pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var _shared_pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! ../../../shared/pipes/unit-filter.pipe */
       "iSLt");
 
       var _c0 = ["paginator"];
 
-      function UnitPickerComponent_ng_container_2_div_15_Template(rf, ctx) {
+      function UnitPickerComponent_button_4_Template(rf, ctx) {
         if (rf & 1) {
-          var _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+          var _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "img", 15);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function UnitPickerComponent_button_4_Template_button_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function UnitPickerComponent_ng_container_2_div_15_Template_img_click_1_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r6);
+            var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-            var unit_r4 = ctx.$implicit;
+            return ctx_r2.onUnset();
+          });
 
-            var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Unset");
 
-            return ctx_r5.onPick(unit_r4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      }
+
+      function UnitPickerComponent_ng_container_5_div_15_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "img", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function UnitPickerComponent_ng_container_5_div_15_Template_img_click_1_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r9);
+
+            var unit_r7 = ctx.$implicit;
+
+            var ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+
+            return ctx_r8.onPick(unit_r7);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -783,11 +3110,11 @@
         }
 
         if (rf & 2) {
-          var unit_r4 = ctx.$implicit;
+          var unit_r7 = ctx.$implicit;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", unit_r4.thumbnailUrl, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", unit_r7.thumbnailUrl, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
         }
       }
 
@@ -795,15 +3122,15 @@
         return [5, 10, 25, 100];
       };
 
-      function UnitPickerComponent_ng_container_2_Template(rf, ctx) {
+      function UnitPickerComponent_ng_container_5_Template(rf, ctx) {
         if (rf & 1) {
-          var _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+          var _r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-dialog-content");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "fieldset", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "fieldset", 5);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "legend");
 
@@ -811,70 +3138,70 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "mat-form-field", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "mat-form-field", 7);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "input", 5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "input", 8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function UnitPickerComponent_ng_container_2_Template_input_ngModelChange_7_listener($event) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8);
-
-            var ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-
-            return ctx_r7.filter.filter = $event;
-          });
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 6);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "app-type-picker", 7);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("classChange", function UnitPickerComponent_ng_container_2_Template_app_type_picker_classChange_9_listener($event) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8);
-
-            var ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-
-            return ctx_r9.typeChange($event);
-          });
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 8);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "app-class-picker", 7);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("classChange", function UnitPickerComponent_ng_container_2_Template_app_class_picker_classChange_11_listener($event) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function UnitPickerComponent_ng_container_5_Template_input_ngModelChange_7_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r11);
 
             var ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-            return ctx_r10.classChange($event);
+            return ctx_r10.filter.filter = $event;
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "mat-checkbox", 9);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function UnitPickerComponent_ng_container_2_Template_mat_checkbox_ngModelChange_12_listener($event) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            var ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 9);
 
-            return ctx_r11.filter.includeOtherClasses = $event;
-          })("ngModelChange", function UnitPickerComponent_ng_container_2_Template_mat_checkbox_ngModelChange_12_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "app-type-picker", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("classChange", function UnitPickerComponent_ng_container_5_Template_app_type_picker_classChange_9_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r11);
 
             var ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-            return ctx_r12.includeOtherClassesChange();
+            return ctx_r12.typeChange($event);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "app-class-picker", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("classChange", function UnitPickerComponent_ng_container_5_Template_app_class_picker_classChange_11_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r11);
+
+            var ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+            return ctx_r13.classChange($event);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "mat-checkbox", 12);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function UnitPickerComponent_ng_container_5_Template_mat_checkbox_ngModelChange_12_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r11);
+
+            var ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+            return ctx_r14.filter.includeOtherClasses = $event;
+          })("ngModelChange", function UnitPickerComponent_ng_container_5_Template_mat_checkbox_ngModelChange_12_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r11);
+
+            var ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+            return ctx_r15.includeOtherClassesChange();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, " Include other classes ");
@@ -885,9 +3212,9 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 10);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 13);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, UnitPickerComponent_ng_container_2_div_15_Template, 2, 1, "div", 11);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, UnitPickerComponent_ng_container_5_div_15_Template, 2, 1, "div", 14);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](16, "slice");
 
@@ -897,14 +3224,14 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "mat-dialog-actions");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "mat-paginator", 12, 13);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "mat-paginator", 15, 16);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("page", function UnitPickerComponent_ng_container_2_Template_mat_paginator_page_18_listener($event) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("page", function UnitPickerComponent_ng_container_5_Template_mat_paginator_page_18_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r11);
 
-            var ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+            var ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-            return ctx_r13.pageChange($event);
+            return ctx_r16.pageChange($event);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -915,25 +3242,25 @@
         }
 
         if (rf & 2) {
-          var filtered_r1 = ctx.ngIf;
+          var filtered_r4 = ctx.ngIf;
 
-          var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+          var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx_r0.filter.filter);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx_r1.filter.filter);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx_r0.filter.includeOtherClasses);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx_r1.filter.includeOtherClasses);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind3"](16, 6, filtered_r1, ctx_r0.filter.page * ctx_r0.filter.limit, ctx_r0.filter.page * ctx_r0.filter.limit + ctx_r0.filter.limit));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind3"](16, 6, filtered_r4, ctx_r1.filter.page * ctx_r1.filter.limit, ctx_r1.filter.page * ctx_r1.filter.limit + ctx_r1.filter.limit));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("length", filtered_r1.length)("pageSize", 10)("pageSizeOptions", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](10, _c1));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("length", filtered_r4.length)("pageSize", 10)("pageSizeOptions", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](10, _c1));
         }
       }
 
@@ -943,23 +3270,28 @@
 
           this.dialogRef = dialogRef;
           this.checked = true;
+          this.units = data.units;
+          this.current = data.current;
           this.filter = {
             page: 0,
             limit: 10,
             filter: '',
             classes: [],
             types: [],
-            includeOtherClasses: true
-          }; // TODO: receive filtering options: classes and types
-
-          this.units = data.units;
-          console.log('data', data);
+            includeOtherClasses: true,
+            excludeIds: data.team && data.team.map(function (u) {
+              return u.id;
+            })
+          };
         }
 
         _createClass(UnitPickerComponent, [{
           key: "ngOnInit",
-          value: function ngOnInit() {
-            console.log('ngOnInit', this.units);
+          value: function ngOnInit() {}
+        }, {
+          key: "onUnset",
+          value: function onUnset() {
+            this.dialogRef.close(null);
           }
         }, {
           key: "onPick",
@@ -1012,31 +3344,45 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.paginator = _t.first);
           }
         },
-        decls: 4,
-        vars: 4,
-        consts: [["mat-dialog-title", ""], [4, "ngIf"], [1, "search"], [1, "filter-left"], [1, "name-filter"], ["matInput", "", "placeholder", "Search unit", "type", "text", "name", "name", 3, "ngModel", "ngModelChange"], [1, "filter-center"], [3, "classChange"], [1, "filter-right"], ["name", "includeOtherClasses", 3, "ngModel", "ngModelChange"], ["fxLayout", "row wrap", 1, "results"], ["class", "result-container", 4, "ngFor", "ngForOf"], [3, "length", "pageSize", "pageSizeOptions", "page"], ["paginator", ""], [1, "result-container"], ["alt", "unit", 1, "result", 3, "src", "click"]],
+        decls: 7,
+        vars: 5,
+        consts: [["mat-dialog-title", "", 1, "title-container"], [1, "buttons"], ["mat-raised-button", "", "color", "warn", 3, "click", 4, "ngIf"], [4, "ngIf"], ["mat-raised-button", "", "color", "warn", 3, "click"], [1, "search"], [1, "filter-left"], [1, "name-filter"], ["matInput", "", "placeholder", "Search unit", "type", "text", "name", "name", 3, "ngModel", "ngModelChange"], [1, "filter-center"], [3, "classChange"], [1, "filter-right"], ["name", "includeOtherClasses", 3, "ngModel", "ngModelChange"], ["fxLayout", "row wrap", 1, "results"], ["class", "result-container", 4, "ngFor", "ngForOf"], [3, "length", "pageSize", "pageSizeOptions", "page"], ["paginator", ""], [1, "result-container"], ["alt", "unit", 1, "result", 3, "src", "click"]],
         template: function UnitPickerComponent_Template(rf, ctx) {
           if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h2", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Pick unit");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "h2");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, " Pick unit ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, UnitPickerComponent_ng_container_2_Template, 20, 11, "ng-container", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](3, "unitFilter");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, UnitPickerComponent_button_4_Template, 2, 0, "button", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, UnitPickerComponent_ng_container_5_Template, 20, 11, "ng-container", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](6, "unitFilter");
           }
 
           if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](3, 1, ctx.units, ctx.filter));
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.current != null);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](6, 2, ctx.units, ctx.filter));
           }
         },
-        directives: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogTitle"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogContent"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_3__["MatFormField"], _angular_material_input__WEBPACK_IMPORTED_MODULE_4__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgModel"], _shared_components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_6__["TypePickerComponent"], _shared_components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_7__["ClassPickerComponent"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_8__["MatCheckbox"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_9__["DefaultLayoutDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogActions"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_10__["MatPaginator"]],
-        pipes: [_shared_pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_11__["UnitFilterPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["SlicePipe"]],
-        styles: [".search[_ngcontent-%COMP%] {\r\n  display: flex;\r\n  justify-content: left;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.filter-left[_ngcontent-%COMP%] {\r\n  min-width: 100px;\r\n  max-width: 300px;\r\n}\r\n\r\n.name-filter[_ngcontent-%COMP%] {\r\n  max-width: 100%;\r\n}\r\n\r\n.filter-center[_ngcontent-%COMP%] {\r\n  min-width: 155px;\r\n  max-width: 250px;\r\n}\r\n\r\n.filter-right[_ngcontent-%COMP%] {\r\n  min-width: 155px;\r\n  max-width: 300px;\r\n}\r\n\r\n.search[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\r\n  margin: 0px 20px;\r\n}\r\n\r\n.results[_ngcontent-%COMP%] {\r\n  width: 100%;\r\n  min-height: 100px;\r\n  justify-content: space-between;\r\n}\r\n\r\n.result-container[_ngcontent-%COMP%] {\r\n  width: 100px;\r\n  min-height: 100px;\r\n}\r\n\r\n.result-container[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\r\n  width: 100%;\r\n}\r\n\r\n.result[_ngcontent-%COMP%] {\r\n  cursor: pointer;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhbS1idWlsZGVyL2NvbXBvbmVudHMvdW5pdC1waWNrZXIvdW5pdC1waWNrZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQWE7RUFDYixxQkFBcUI7RUFDckIsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxpQkFBaUI7RUFDakIsOEJBQThCO0FBQ2hDOztBQUVBO0VBQ0UsWUFBWTtFQUNaLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGVBQWU7QUFDakIiLCJmaWxlIjoic3JjL2FwcC90ZWFtLWJ1aWxkZXIvY29tcG9uZW50cy91bml0LXBpY2tlci91bml0LXBpY2tlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNlYXJjaCB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGxlZnQ7XHJcbiAgbWFyZ2luLWJvdHRvbTogMjBweDtcclxufVxyXG5cclxuLmZpbHRlci1sZWZ0IHtcclxuICBtaW4td2lkdGg6IDEwMHB4O1xyXG4gIG1heC13aWR0aDogMzAwcHg7XHJcbn1cclxuXHJcbi5uYW1lLWZpbHRlciB7XHJcbiAgbWF4LXdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4uZmlsdGVyLWNlbnRlciB7XHJcbiAgbWluLXdpZHRoOiAxNTVweDtcclxuICBtYXgtd2lkdGg6IDI1MHB4O1xyXG59XHJcblxyXG4uZmlsdGVyLXJpZ2h0IHtcclxuICBtaW4td2lkdGg6IDE1NXB4O1xyXG4gIG1heC13aWR0aDogMzAwcHg7XHJcbn1cclxuXHJcbi5zZWFyY2ggPiAqIHtcclxuICBtYXJnaW46IDBweCAyMHB4O1xyXG59XHJcblxyXG4ucmVzdWx0cyB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgbWluLWhlaWdodDogMTAwcHg7XHJcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG59XHJcblxyXG4ucmVzdWx0LWNvbnRhaW5lciB7XHJcbiAgd2lkdGg6IDEwMHB4O1xyXG4gIG1pbi1oZWlnaHQ6IDEwMHB4O1xyXG59XHJcblxyXG4ucmVzdWx0LWNvbnRhaW5lciBpbWcge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4ucmVzdWx0IHtcclxuICBjdXJzb3I6IHBvaW50ZXI7XHJcbn0iXX0= */"]
+        directives: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogTitle"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_material_button__WEBPACK_IMPORTED_MODULE_3__["MatButton"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogContent"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__["MatFormField"], _angular_material_input__WEBPACK_IMPORTED_MODULE_5__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgModel"], _shared_components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_7__["TypePickerComponent"], _shared_components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_8__["ClassPickerComponent"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_9__["MatCheckbox"], _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_10__["DefaultLayoutDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogActions"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_11__["MatPaginator"]],
+        pipes: [_shared_pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["SlicePipe"]],
+        styles: [".title-container[_ngcontent-%COMP%] {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.search[_ngcontent-%COMP%] {\r\n  display: flex;\r\n  justify-content: left;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.filter-left[_ngcontent-%COMP%] {\r\n  min-width: 100px;\r\n  max-width: 300px;\r\n}\r\n\r\n.name-filter[_ngcontent-%COMP%] {\r\n  max-width: 100%;\r\n}\r\n\r\n.filter-center[_ngcontent-%COMP%] {\r\n  min-width: 155px;\r\n  max-width: 250px;\r\n}\r\n\r\n.filter-right[_ngcontent-%COMP%] {\r\n  min-width: 155px;\r\n  max-width: 300px;\r\n}\r\n\r\n.search[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\r\n  margin: 0px 20px;\r\n}\r\n\r\n.results[_ngcontent-%COMP%] {\r\n  width: 100%;\r\n  min-height: 100px;\r\n  justify-content: center;\r\n}\r\n\r\n.result-container[_ngcontent-%COMP%] {\r\n  width: 100px;\r\n  min-height: 100px;\r\n}\r\n\r\n.result-container[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\r\n  width: 100%;\r\n}\r\n\r\n.result[_ngcontent-%COMP%] {\r\n  cursor: pointer;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhbS1idWlsZGVyL2NvbXBvbmVudHMvdW5pdC1waWNrZXIvdW5pdC1waWNrZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQWE7RUFDYiw4QkFBOEI7QUFDaEM7O0FBRUE7RUFDRSxhQUFhO0VBQ2IscUJBQXFCO0VBQ3JCLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsaUJBQWlCO0VBQ2pCLHVCQUF1QjtBQUN6Qjs7QUFFQTtFQUNFLFlBQVk7RUFDWixpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxXQUFXO0FBQ2I7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCIiwiZmlsZSI6InNyYy9hcHAvdGVhbS1idWlsZGVyL2NvbXBvbmVudHMvdW5pdC1waWNrZXIvdW5pdC1waWNrZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50aXRsZS1jb250YWluZXIge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG59XHJcblxyXG4uc2VhcmNoIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogbGVmdDtcclxuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xyXG59XHJcblxyXG4uZmlsdGVyLWxlZnQge1xyXG4gIG1pbi13aWR0aDogMTAwcHg7XHJcbiAgbWF4LXdpZHRoOiAzMDBweDtcclxufVxyXG5cclxuLm5hbWUtZmlsdGVyIHtcclxuICBtYXgtd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5maWx0ZXItY2VudGVyIHtcclxuICBtaW4td2lkdGg6IDE1NXB4O1xyXG4gIG1heC13aWR0aDogMjUwcHg7XHJcbn1cclxuXHJcbi5maWx0ZXItcmlnaHQge1xyXG4gIG1pbi13aWR0aDogMTU1cHg7XHJcbiAgbWF4LXdpZHRoOiAzMDBweDtcclxufVxyXG5cclxuLnNlYXJjaCA+ICoge1xyXG4gIG1hcmdpbjogMHB4IDIwcHg7XHJcbn1cclxuXHJcbi5yZXN1bHRzIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBtaW4taGVpZ2h0OiAxMDBweDtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxufVxyXG5cclxuLnJlc3VsdC1jb250YWluZXIge1xyXG4gIHdpZHRoOiAxMDBweDtcclxuICBtaW4taGVpZ2h0OiAxMDBweDtcclxufVxyXG5cclxuLnJlc3VsdC1jb250YWluZXIgaW1nIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLnJlc3VsdCB7XHJcbiAgY3Vyc29yOiBwb2ludGVyO1xyXG59Il19 */"]
       });
       /*@__PURE__*/
 
@@ -1241,97 +3587,97 @@
         var _super = _createSuper(MatSlider);
 
         function MatSlider(elementRef, _focusMonitor, _changeDetectorRef, _dir, tabIndex, _ngZone, _document, _animationMode) {
-          var _this2;
+          var _this9;
 
           _classCallCheck(this, MatSlider);
 
-          _this2 = _super.call(this, elementRef);
-          _this2._focusMonitor = _focusMonitor;
-          _this2._changeDetectorRef = _changeDetectorRef;
-          _this2._dir = _dir;
-          _this2._ngZone = _ngZone;
-          _this2._animationMode = _animationMode;
-          _this2._invert = false;
-          _this2._max = 100;
-          _this2._min = 0;
-          _this2._step = 1;
-          _this2._thumbLabel = false;
-          _this2._tickInterval = 0;
-          _this2._value = null;
-          _this2._vertical = false;
+          _this9 = _super.call(this, elementRef);
+          _this9._focusMonitor = _focusMonitor;
+          _this9._changeDetectorRef = _changeDetectorRef;
+          _this9._dir = _dir;
+          _this9._ngZone = _ngZone;
+          _this9._animationMode = _animationMode;
+          _this9._invert = false;
+          _this9._max = 100;
+          _this9._min = 0;
+          _this9._step = 1;
+          _this9._thumbLabel = false;
+          _this9._tickInterval = 0;
+          _this9._value = null;
+          _this9._vertical = false;
           /** Event emitted when the slider value has changed. */
 
-          _this2.change = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+          _this9.change = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
           /** Event emitted when the slider thumb moves. */
 
-          _this2.input = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+          _this9.input = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
           /**
            * Emits when the raw value of the slider changes. This is here primarily
            * to facilitate the two-way binding for the `value` input.
            * @docs-private
            */
 
-          _this2.valueChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+          _this9.valueChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
           /** onTouch function registered via registerOnTouch (ControlValueAccessor). */
 
-          _this2.onTouched = function () {};
+          _this9.onTouched = function () {};
 
-          _this2._percent = 0;
+          _this9._percent = 0;
           /**
            * Whether or not the thumb is sliding.
            * Used to determine if there should be a transition for the thumb and fill track.
            */
 
-          _this2._isSliding = false;
+          _this9._isSliding = false;
           /**
            * Whether or not the slider is active (clicked or sliding).
            * Used to shrink and grow the thumb as according to the Material Design spec.
            */
 
-          _this2._isActive = false;
+          _this9._isActive = false;
           /** The size of a tick interval as a percentage of the size of the track. */
 
-          _this2._tickIntervalPercent = 0;
+          _this9._tickIntervalPercent = 0;
           /** The dimensions of the slider. */
 
-          _this2._sliderDimensions = null;
+          _this9._sliderDimensions = null;
 
-          _this2._controlValueAccessorChangeFn = function () {};
+          _this9._controlValueAccessorChangeFn = function () {};
           /** Subscription to the Directionality change EventEmitter. */
 
 
-          _this2._dirChangeSubscription = rxjs__WEBPACK_IMPORTED_MODULE_10__["Subscription"].EMPTY;
+          _this9._dirChangeSubscription = rxjs__WEBPACK_IMPORTED_MODULE_10__["Subscription"].EMPTY;
           /** Called when the user has put their pointer down on the slider. */
 
-          _this2._pointerDown = function (event) {
+          _this9._pointerDown = function (event) {
             // Don't do anything if the slider is disabled or the
             // user is using anything other than the main mouse button.
-            if (_this2.disabled || _this2._isSliding || !isTouchEvent(event) && event.button !== 0) {
+            if (_this9.disabled || _this9._isSliding || !isTouchEvent(event) && event.button !== 0) {
               return;
             }
 
-            _this2._ngZone.run(function () {
-              var oldValue = _this2.value;
+            _this9._ngZone.run(function () {
+              var oldValue = _this9.value;
               var pointerPosition = getPointerPositionOnPage(event);
-              _this2._isSliding = true;
-              _this2._lastPointerEvent = event;
+              _this9._isSliding = true;
+              _this9._lastPointerEvent = event;
               event.preventDefault();
 
-              _this2._focusHostElement();
+              _this9._focusHostElement();
 
-              _this2._onMouseenter(); // Simulate mouseenter in case this is a mobile device.
+              _this9._onMouseenter(); // Simulate mouseenter in case this is a mobile device.
 
 
-              _this2._bindGlobalEvents(event);
+              _this9._bindGlobalEvents(event);
 
-              _this2._focusHostElement();
+              _this9._focusHostElement();
 
-              _this2._updateValueFromPosition(pointerPosition);
+              _this9._updateValueFromPosition(pointerPosition);
 
-              _this2._valueOnSlideStart = oldValue; // Emit a change and input event if the value changed.
+              _this9._valueOnSlideStart = oldValue; // Emit a change and input event if the value changed.
 
-              if (oldValue != _this2.value) {
-                _this2._emitInputEvent();
+              if (oldValue != _this9.value) {
+                _this9._emitInputEvent();
               }
             });
           };
@@ -1341,60 +3687,60 @@
            */
 
 
-          _this2._pointerMove = function (event) {
-            if (_this2._isSliding) {
+          _this9._pointerMove = function (event) {
+            if (_this9._isSliding) {
               // Prevent the slide from selecting anything else.
               event.preventDefault();
-              var oldValue = _this2.value;
-              _this2._lastPointerEvent = event;
+              var oldValue = _this9.value;
+              _this9._lastPointerEvent = event;
 
-              _this2._updateValueFromPosition(getPointerPositionOnPage(event)); // Native range elements always emit `input` events when the value changed while sliding.
+              _this9._updateValueFromPosition(getPointerPositionOnPage(event)); // Native range elements always emit `input` events when the value changed while sliding.
 
 
-              if (oldValue != _this2.value) {
-                _this2._emitInputEvent();
+              if (oldValue != _this9.value) {
+                _this9._emitInputEvent();
               }
             }
           };
           /** Called when the user has lifted their pointer. Bound on the document level. */
 
 
-          _this2._pointerUp = function (event) {
-            if (_this2._isSliding) {
+          _this9._pointerUp = function (event) {
+            if (_this9._isSliding) {
               event.preventDefault();
 
-              _this2._removeGlobalEvents();
+              _this9._removeGlobalEvents();
 
-              _this2._isSliding = false;
+              _this9._isSliding = false;
 
-              if (_this2._valueOnSlideStart != _this2.value && !_this2.disabled) {
-                _this2._emitChangeEvent();
+              if (_this9._valueOnSlideStart != _this9.value && !_this9.disabled) {
+                _this9._emitChangeEvent();
               }
 
-              _this2._valueOnSlideStart = _this2._lastPointerEvent = null;
+              _this9._valueOnSlideStart = _this9._lastPointerEvent = null;
             }
           };
           /** Called when the window has lost focus. */
 
 
-          _this2._windowBlur = function () {
+          _this9._windowBlur = function () {
             // If the window is blurred while dragging we need to stop dragging because the
             // browser won't dispatch the `mouseup` and `touchend` events anymore.
-            if (_this2._lastPointerEvent) {
-              _this2._pointerUp(_this2._lastPointerEvent);
+            if (_this9._lastPointerEvent) {
+              _this9._pointerUp(_this9._lastPointerEvent);
             }
           };
 
-          _this2._document = _document;
-          _this2.tabIndex = parseInt(tabIndex) || 0;
+          _this9._document = _document;
+          _this9.tabIndex = parseInt(tabIndex) || 0;
 
           _ngZone.runOutsideAngular(function () {
             var element = elementRef.nativeElement;
-            element.addEventListener('mousedown', _this2._pointerDown, activeEventOptions);
-            element.addEventListener('touchstart', _this2._pointerDown, activeEventOptions);
+            element.addEventListener('mousedown', _this9._pointerDown, activeEventOptions);
+            element.addEventListener('touchstart', _this9._pointerDown, activeEventOptions);
           });
 
-          return _this2;
+          return _this9;
         }
         /** Whether the slider is inverted. */
 
@@ -1569,17 +3915,17 @@
         }, {
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            var _this3 = this;
+            var _this10 = this;
 
             this._focusMonitor.monitor(this._elementRef, true).subscribe(function (origin) {
-              _this3._isActive = !!origin && origin !== 'keyboard';
+              _this10._isActive = !!origin && origin !== 'keyboard';
 
-              _this3._changeDetectorRef.detectChanges();
+              _this10._changeDetectorRef.detectChanges();
             });
 
             if (this._dir) {
               this._dirChangeSubscription = this._dir.change.subscribe(function () {
-                _this3._changeDetectorRef.markForCheck();
+                _this10._changeDetectorRef.markForCheck();
               });
             }
           }
@@ -2520,6 +4866,629 @@
     },
 
     /***/
+    "mrSG":
+    /*!*****************************************!*\
+      !*** ./node_modules/tslib/tslib.es6.js ***!
+      \*****************************************/
+
+    /*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
+
+    /***/
+    function mrSG(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__extends", function () {
+        return __extends;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__assign", function () {
+        return _assign;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__rest", function () {
+        return __rest;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__decorate", function () {
+        return __decorate;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__param", function () {
+        return __param;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__metadata", function () {
+        return __metadata;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__awaiter", function () {
+        return __awaiter;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__generator", function () {
+        return __generator;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__createBinding", function () {
+        return __createBinding;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__exportStar", function () {
+        return __exportStar;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__values", function () {
+        return __values;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__read", function () {
+        return __read;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__spread", function () {
+        return __spread;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__spreadArrays", function () {
+        return __spreadArrays;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__await", function () {
+        return __await;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function () {
+        return __asyncGenerator;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function () {
+        return __asyncDelegator;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__asyncValues", function () {
+        return __asyncValues;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function () {
+        return __makeTemplateObject;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__importStar", function () {
+        return __importStar;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__importDefault", function () {
+        return __importDefault;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function () {
+        return __classPrivateFieldGet;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function () {
+        return __classPrivateFieldSet;
+      });
+      /*! *****************************************************************************
+      Copyright (c) Microsoft Corporation.
+      
+      Permission to use, copy, modify, and/or distribute this software for any
+      purpose with or without fee is hereby granted.
+      
+      THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+      REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+      AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+      INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+      LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+      OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+      PERFORMANCE OF THIS SOFTWARE.
+      ***************************************************************************** */
+
+      /* global Reflect, Promise */
+
+
+      var _extendStatics = function extendStatics(d, b) {
+        _extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function (d, b) {
+          d.__proto__ = b;
+        } || function (d, b) {
+          for (var p in b) {
+            if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+          }
+        };
+
+        return _extendStatics(d, b);
+      };
+
+      function __extends(d, b) {
+        _extendStatics(d, b);
+
+        function __() {
+          this.constructor = d;
+        }
+
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+      }
+
+      var _assign = function __assign() {
+        _assign = Object.assign || function __assign(t) {
+          for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+
+            for (var p in s) {
+              if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+            }
+          }
+
+          return t;
+        };
+
+        return _assign.apply(this, arguments);
+      };
+
+      function __rest(s, e) {
+        var t = {};
+
+        for (var p in s) {
+          if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+        }
+
+        if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+          if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+        }
+        return t;
+      }
+
+      function __decorate(decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      }
+
+      function __param(paramIndex, decorator) {
+        return function (target, key) {
+          decorator(target, key, paramIndex);
+        };
+      }
+
+      function __metadata(metadataKey, metadataValue) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+      }
+
+      function __awaiter(thisArg, _arguments, P, generator) {
+        function adopt(value) {
+          return value instanceof P ? value : new P(function (resolve) {
+            resolve(value);
+          });
+        }
+
+        return new (P || (P = Promise))(function (resolve, reject) {
+          function fulfilled(value) {
+            try {
+              step(generator.next(value));
+            } catch (e) {
+              reject(e);
+            }
+          }
+
+          function rejected(value) {
+            try {
+              step(generator["throw"](value));
+            } catch (e) {
+              reject(e);
+            }
+          }
+
+          function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+          }
+
+          step((generator = generator.apply(thisArg, _arguments || [])).next());
+        });
+      }
+
+      function __generator(thisArg, body) {
+        var _ = {
+          label: 0,
+          sent: function sent() {
+            if (t[0] & 1) throw t[1];
+            return t[1];
+          },
+          trys: [],
+          ops: []
+        },
+            f,
+            y,
+            t,
+            g;
+        return g = {
+          next: verb(0),
+          "throw": verb(1),
+          "return": verb(2)
+        }, typeof Symbol === "function" && (g[Symbol.iterator] = function () {
+          return this;
+        }), g;
+
+        function verb(n) {
+          return function (v) {
+            return step([n, v]);
+          };
+        }
+
+        function step(op) {
+          if (f) throw new TypeError("Generator is already executing.");
+
+          while (_) {
+            try {
+              if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+              if (y = 0, t) op = [op[0] & 2, t.value];
+
+              switch (op[0]) {
+                case 0:
+                case 1:
+                  t = op;
+                  break;
+
+                case 4:
+                  _.label++;
+                  return {
+                    value: op[1],
+                    done: false
+                  };
+
+                case 5:
+                  _.label++;
+                  y = op[1];
+                  op = [0];
+                  continue;
+
+                case 7:
+                  op = _.ops.pop();
+
+                  _.trys.pop();
+
+                  continue;
+
+                default:
+                  if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                    _ = 0;
+                    continue;
+                  }
+
+                  if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                    _.label = op[1];
+                    break;
+                  }
+
+                  if (op[0] === 6 && _.label < t[1]) {
+                    _.label = t[1];
+                    t = op;
+                    break;
+                  }
+
+                  if (t && _.label < t[2]) {
+                    _.label = t[2];
+
+                    _.ops.push(op);
+
+                    break;
+                  }
+
+                  if (t[2]) _.ops.pop();
+
+                  _.trys.pop();
+
+                  continue;
+              }
+
+              op = body.call(thisArg, _);
+            } catch (e) {
+              op = [6, e];
+              y = 0;
+            } finally {
+              f = t = 0;
+            }
+          }
+
+          if (op[0] & 5) throw op[1];
+          return {
+            value: op[0] ? op[1] : void 0,
+            done: true
+          };
+        }
+      }
+
+      var __createBinding = Object.create ? function (o, m, k, k2) {
+        if (k2 === undefined) k2 = k;
+        Object.defineProperty(o, k2, {
+          enumerable: true,
+          get: function get() {
+            return m[k];
+          }
+        });
+      } : function (o, m, k, k2) {
+        if (k2 === undefined) k2 = k;
+        o[k2] = m[k];
+      };
+
+      function __exportStar(m, o) {
+        for (var p in m) {
+          if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p)) __createBinding(o, m, p);
+        }
+      }
+
+      function __values(o) {
+        var s = typeof Symbol === "function" && Symbol.iterator,
+            m = s && o[s],
+            i = 0;
+        if (m) return m.call(o);
+        if (o && typeof o.length === "number") return {
+          next: function next() {
+            if (o && i >= o.length) o = void 0;
+            return {
+              value: o && o[i++],
+              done: !o
+            };
+          }
+        };
+        throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+      }
+
+      function __read(o, n) {
+        var m = typeof Symbol === "function" && o[Symbol.iterator];
+        if (!m) return o;
+        var i = m.call(o),
+            r,
+            ar = [],
+            e;
+
+        try {
+          while ((n === void 0 || n-- > 0) && !(r = i.next()).done) {
+            ar.push(r.value);
+          }
+        } catch (error) {
+          e = {
+            error: error
+          };
+        } finally {
+          try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+          } finally {
+            if (e) throw e.error;
+          }
+        }
+
+        return ar;
+      }
+
+      function __spread() {
+        for (var ar = [], i = 0; i < arguments.length; i++) {
+          ar = ar.concat(__read(arguments[i]));
+        }
+
+        return ar;
+      }
+
+      function __spreadArrays() {
+        for (var s = 0, i = 0, il = arguments.length; i < il; i++) {
+          s += arguments[i].length;
+        }
+
+        for (var r = Array(s), k = 0, i = 0; i < il; i++) {
+          for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++) {
+            r[k] = a[j];
+          }
+        }
+
+        return r;
+      }
+
+      ;
+
+      function __await(v) {
+        return this instanceof __await ? (this.v = v, this) : new __await(v);
+      }
+
+      function __asyncGenerator(thisArg, _arguments, generator) {
+        if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+        var g = generator.apply(thisArg, _arguments || []),
+            i,
+            q = [];
+        return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () {
+          return this;
+        }, i;
+
+        function verb(n) {
+          if (g[n]) i[n] = function (v) {
+            return new Promise(function (a, b) {
+              q.push([n, v, a, b]) > 1 || resume(n, v);
+            });
+          };
+        }
+
+        function resume(n, v) {
+          try {
+            step(g[n](v));
+          } catch (e) {
+            settle(q[0][3], e);
+          }
+        }
+
+        function step(r) {
+          r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);
+        }
+
+        function fulfill(value) {
+          resume("next", value);
+        }
+
+        function reject(value) {
+          resume("throw", value);
+        }
+
+        function settle(f, v) {
+          if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]);
+        }
+      }
+
+      function __asyncDelegator(o) {
+        var i, p;
+        return i = {}, verb("next"), verb("throw", function (e) {
+          throw e;
+        }), verb("return"), i[Symbol.iterator] = function () {
+          return this;
+        }, i;
+
+        function verb(n, f) {
+          i[n] = o[n] ? function (v) {
+            return (p = !p) ? {
+              value: __await(o[n](v)),
+              done: n === "return"
+            } : f ? f(v) : v;
+          } : f;
+        }
+      }
+
+      function __asyncValues(o) {
+        if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+        var m = o[Symbol.asyncIterator],
+            i;
+        return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () {
+          return this;
+        }, i);
+
+        function verb(n) {
+          i[n] = o[n] && function (v) {
+            return new Promise(function (resolve, reject) {
+              v = o[n](v), settle(resolve, reject, v.done, v.value);
+            });
+          };
+        }
+
+        function settle(resolve, reject, d, v) {
+          Promise.resolve(v).then(function (v) {
+            resolve({
+              value: v,
+              done: d
+            });
+          }, reject);
+        }
+      }
+
+      function __makeTemplateObject(cooked, raw) {
+        if (Object.defineProperty) {
+          Object.defineProperty(cooked, "raw", {
+            value: raw
+          });
+        } else {
+          cooked.raw = raw;
+        }
+
+        return cooked;
+      }
+
+      ;
+
+      var __setModuleDefault = Object.create ? function (o, v) {
+        Object.defineProperty(o, "default", {
+          enumerable: true,
+          value: v
+        });
+      } : function (o, v) {
+        o["default"] = v;
+      };
+
+      function __importStar(mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k in mod) {
+          if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+        }
+
+        __setModuleDefault(result, mod);
+
+        return result;
+      }
+
+      function __importDefault(mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      }
+
+      function __classPrivateFieldGet(receiver, privateMap) {
+        if (!privateMap.has(receiver)) {
+          throw new TypeError("attempted to get private field on non-instance");
+        }
+
+        return privateMap.get(receiver);
+      }
+
+      function __classPrivateFieldSet(receiver, privateMap, value) {
+        if (!privateMap.has(receiver)) {
+          throw new TypeError("attempted to set private field on non-instance");
+        }
+
+        privateMap.set(receiver, value);
+        return value;
+      }
+      /***/
+
+    },
+
+    /***/
     "pMoy":
     /*!*************************************************************!*\
       !*** ./node_modules/@angular/material/fesm2015/checkbox.js ***!
@@ -2735,71 +5704,71 @@
          * @breaking-change 10.0.0
          */
         _clickAction, _animationMode, _options) {
-          var _this4;
+          var _this11;
 
           _classCallCheck(this, MatCheckbox);
 
-          _this4 = _super2.call(this, elementRef);
-          _this4._changeDetectorRef = _changeDetectorRef;
-          _this4._focusMonitor = _focusMonitor;
-          _this4._ngZone = _ngZone;
-          _this4._clickAction = _clickAction;
-          _this4._animationMode = _animationMode;
-          _this4._options = _options;
+          _this11 = _super2.call(this, elementRef);
+          _this11._changeDetectorRef = _changeDetectorRef;
+          _this11._focusMonitor = _focusMonitor;
+          _this11._ngZone = _ngZone;
+          _this11._clickAction = _clickAction;
+          _this11._animationMode = _animationMode;
+          _this11._options = _options;
           /**
            * Attached to the aria-label attribute of the host element. In most cases, aria-labelledby will
            * take precedence so this may be omitted.
            */
 
-          _this4.ariaLabel = '';
+          _this11.ariaLabel = '';
           /**
            * Users can specify the `aria-labelledby` attribute which will be forwarded to the input element
            */
 
-          _this4.ariaLabelledby = null;
-          _this4._uniqueId = "mat-checkbox-".concat(++nextUniqueId);
+          _this11.ariaLabelledby = null;
+          _this11._uniqueId = "mat-checkbox-".concat(++nextUniqueId);
           /** A unique id for the checkbox input. If none is supplied, it will be auto-generated. */
 
-          _this4.id = _this4._uniqueId;
+          _this11.id = _this11._uniqueId;
           /** Whether the label should appear after or before the checkbox. Defaults to 'after' */
 
-          _this4.labelPosition = 'after';
+          _this11.labelPosition = 'after';
           /** Name value will be applied to the input element if present */
 
-          _this4.name = null;
+          _this11.name = null;
           /** Event emitted when the checkbox's `checked` value changes. */
 
-          _this4.change = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+          _this11.change = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
           /** Event emitted when the checkbox's `indeterminate` value changes. */
 
-          _this4.indeterminateChange = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+          _this11.indeterminateChange = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
           /**
            * Called when the checkbox is blurred. Needed to properly implement ControlValueAccessor.
            * @docs-private
            */
 
-          _this4._onTouched = function () {};
+          _this11._onTouched = function () {};
 
-          _this4._currentAnimationClass = '';
-          _this4._currentCheckState = 0
+          _this11._currentAnimationClass = '';
+          _this11._currentCheckState = 0
           /* Init */
           ;
 
-          _this4._controlValueAccessorChangeFn = function () {};
+          _this11._controlValueAccessorChangeFn = function () {};
 
-          _this4._checked = false;
-          _this4._disabled = false;
-          _this4._indeterminate = false;
-          _this4._options = _this4._options || {};
+          _this11._checked = false;
+          _this11._disabled = false;
+          _this11._indeterminate = false;
+          _this11._options = _this11._options || {};
 
-          if (_this4._options.color) {
-            _this4.color = _this4.defaultColor = _this4._options.color;
+          if (_this11._options.color) {
+            _this11.color = _this11.defaultColor = _this11._options.color;
           }
 
-          _this4.tabIndex = parseInt(tabIndex) || 0; // TODO: Remove this after the `_clickAction` parameter is removed as an injection parameter.
+          _this11.tabIndex = parseInt(tabIndex) || 0; // TODO: Remove this after the `_clickAction` parameter is removed as an injection parameter.
 
-          _this4._clickAction = _this4._clickAction || _this4._options.clickAction;
-          return _this4;
+          _this11._clickAction = _this11._clickAction || _this11._options.clickAction;
+          return _this11;
         }
         /** Returns the unique id for the visual hidden input. */
 
@@ -2807,7 +5776,7 @@
         _createClass(MatCheckbox, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            var _this5 = this;
+            var _this12 = this;
 
             this._focusMonitor.monitor(this._elementRef, true).subscribe(function (focusOrigin) {
               if (!focusOrigin) {
@@ -2817,9 +5786,9 @@
                 // See https://github.com/angular/angular/issues/17793. To work around this, we defer
                 // telling the form control it has been touched until the next tick.
                 Promise.resolve().then(function () {
-                  _this5._onTouched();
+                  _this12._onTouched();
 
-                  _this5._changeDetectorRef.markForCheck();
+                  _this12._changeDetectorRef.markForCheck();
                 });
               }
             });
@@ -2947,7 +5916,7 @@
         }, {
           key: "_onInputClick",
           value: function _onInputClick(event) {
-            var _this6 = this;
+            var _this13 = this;
 
             // We have to stop propagation for click events on the visual hidden input element.
             // By default, when a user clicks on a label element, a generated click event will be
@@ -2962,9 +5931,9 @@
               // When user manually click on the checkbox, `indeterminate` is set to false.
               if (this.indeterminate && this._clickAction !== 'check') {
                 Promise.resolve().then(function () {
-                  _this6._indeterminate = false;
+                  _this13._indeterminate = false;
 
-                  _this6.indeterminateChange.emit(_this6._indeterminate);
+                  _this13.indeterminateChange.emit(_this13._indeterminate);
                 });
               }
 
@@ -3686,6 +6655,91 @@
     },
 
     /***/
+    "vy+p":
+    /*!**************************************!*\
+      !*** ./src/app/core/utils/images.ts ***!
+      \**************************************/
+
+    /*! exports provided: typeImage, classImage */
+
+    /***/
+    function vyP(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "typeImage", function () {
+        return typeImage;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "classImage", function () {
+        return classImage;
+      });
+
+      var typeImage = function typeImage(type) {
+        switch (type) {
+          case 'STR':
+            return 'assets/images/filter_attribute_power.png';
+
+          case 'DEX':
+            return 'assets/images/filter_attribute_technical.png';
+
+          case 'QCK':
+            return 'assets/images/filter_attribute_speed.png';
+
+          case 'PSY':
+            return 'assets/images/filter_attribute_heart.png';
+
+          case 'INT':
+            return 'assets/images/filter_attribute_intellect.png';
+
+          case 'DUAL':
+            return 'assets/images/filter_attribute_multiplecharacter.png';
+
+          default:
+            return '';
+        }
+      };
+
+      var classImage = function classImage(type) {
+        switch (type) {
+          case 'Fighter':
+            return 'assets/images/filter_type_icn_1.png';
+
+          case 'Slasher':
+            return 'assets/images/filter_type_icn_2.png';
+
+          case 'Striker':
+            return 'assets/images/filter_type_icn_3.png';
+
+          case 'Shooter':
+            return 'assets/images/filter_type_icn_4.png';
+
+          case 'Free Spirit':
+            return 'assets/images/filter_type_icn_5.png';
+
+          case 'Driven':
+            return 'assets/images/filter_type_icn_6.png';
+
+          case 'Cerebral':
+            return 'assets/images/filter_type_icn_7.png';
+
+          case 'Powerhouse':
+            return 'assets/images/filter_type_icn_8.png';
+
+          default:
+            return '';
+        }
+      };
+      /***/
+
+    },
+
+    /***/
     "xqVb":
     /*!***************************************************************************!*\
       !*** ./src/app/team-builder/pages/team-builder/team-builder.component.ts ***!
@@ -3781,9 +6835,9 @@
         if (rf & 1) {
           var _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 11);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "app-unit-card", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "app-unit-card", 9);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("unitClick", function TeamBuilderComponent_div_3_Template_app_unit_card_unitClick_1_listener() {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5);
@@ -3807,7 +6861,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("unit", unit_r2)("teamEffects", ctx_r0.teamEffects);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("unit", unit_r2)("teamEffects", ctx_r0.teamEffects)("battleTimer", ctx_r0.battleTimer);
         }
       }
 
@@ -3815,9 +6869,9 @@
         if (rf & 1) {
           var _r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 11);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "app-unit-card", 13);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "app-unit-card", 9);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("unitClick", function TeamBuilderComponent_div_5_Template_app_unit_card_unitClick_1_listener() {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r9);
@@ -3837,9 +6891,11 @@
         if (rf & 2) {
           var unit_r6 = ctx.$implicit;
 
+          var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("unit", unit_r6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("unit", unit_r6)("teamEffects", ctx_r1.teamEffects)("battleTimer", ctx_r1.battleTimer);
         }
       }
 
@@ -3851,23 +6907,25 @@
           _classCallCheck(this, TeamBuilderComponent);
 
           this.dialog = dialog;
-          this.battleTime = _core_constants_battle__WEBPACK_IMPORTED_MODULE_4__["battleTime"];
-          this.mainTeam = [];
-          this.subTeam = [];
-          this.teamEffects = [];
-          this.battleTimer = this.battleTime;
+          this.initialBattleTime = _core_constants_battle__WEBPACK_IMPORTED_MODULE_4__["battleTime"];
+          this.battleTimer = this.initialBattleTime;
           this.totals = {
             cost: 0
           };
           this.units = dataSource.data;
+          this.mainTeam = [];
 
           for (var index = 1; index <= mainTeamSize; index++) {
             this.mainTeam.push(null);
           }
 
+          this.subTeam = [];
+
           for (var _index = 1; _index <= subTeamSize; _index++) {
             this.subTeam.push(null);
           }
+
+          this.teamEffects = [];
         }
 
         _createClass(TeamBuilderComponent, [{
@@ -3879,57 +6937,59 @@
           }
         }, {
           key: "updateBuffs",
-          value: function updateBuffs() {
-            var _this7 = this;
+          value: function updateBuffs(time) {
+            var _this14 = this;
 
             this.teamEffects = this.mainTeam.filter(function (unit) {
               return unit != null;
             }).flatMap(function (unit) {
               return unit.lvl5Ability;
             }).filter(function (e) {
-              return e.effect === 'buff' && Object(_core_utils_effects__WEBPACK_IMPORTED_MODULE_3__["buffAppliesToTime"])(e, _this7.battleTime);
+              return e.effect === 'buff' && Object(_core_utils_effects__WEBPACK_IMPORTED_MODULE_3__["buffAppliesToTime"])(e, time || _this14.battleTimer);
             });
           }
         }, {
           key: "updateDebuffs",
-          value: function updateDebuffs() {// update totals.debuffs based on main team current state
+          value: function updateDebuffs(time) {// update totals.debuffs based on main team current state
           }
         }, {
           key: "mainTeamUnitClick",
           value: function mainTeamUnitClick(index) {
-            var _this8 = this;
+            var _this15 = this;
 
-            console.log('unit clicked', index);
-            this.openUnitPicker(function (data) {
-              _this8.mainTeam[index] = data;
+            this.openUnitPicker(this.mainTeam[index], function (data) {
+              _this15.mainTeam[index] = data;
 
-              _this8.updateBuffs();
+              _this15.updateBuffs();
 
-              _this8.updateDebuffs();
+              _this15.updateDebuffs();
 
-              _this8.updateCost();
+              _this15.updateCost();
             });
           }
         }, {
           key: "subTeamUnitClick",
           value: function subTeamUnitClick(index) {
-            var _this9 = this;
+            var _this16 = this;
 
-            console.log('sub unit clicked', index);
-            this.openUnitPicker(function (data) {
-              _this9.subTeam[index] = data;
+            this.openUnitPicker(this.subTeam[index], function (data) {
+              _this16.subTeam[index] = data;
 
-              _this9.updateCost();
+              _this16.updateCost();
             });
           }
         }, {
           key: "openUnitPicker",
-          value: function openUnitPicker(onPick) {
+          value: function openUnitPicker(current, onPick) {
             var dialogConfig = new _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogConfig"]();
             dialogConfig.hasBackdrop = true;
             dialogConfig.disableClose = false;
             dialogConfig.autoFocus = true;
             dialogConfig.data = {
+              team: [].concat(_toConsumableArray(this.mainTeam), _toConsumableArray(this.subTeam)).filter(function (u) {
+                return u != null;
+              }),
+              current: current,
               units: this.units
             };
             var dialogRef = this.dialog.open(_components_unit_picker_unit_picker_component__WEBPACK_IMPORTED_MODULE_2__["UnitPickerComponent"], dialogConfig);
@@ -3939,6 +6999,12 @@
                 onPick(data);
               }
             });
+          }
+        }, {
+          key: "battleTimerChange",
+          value: function battleTimerChange(event) {
+            this.updateBuffs(event.value);
+            this.updateDebuffs(event.value);
           }
         }]);
 
@@ -3952,9 +7018,9 @@
       TeamBuilderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
         type: TeamBuilderComponent,
         selectors: [["app-team-builder"]],
-        decls: 18,
-        vars: 9,
-        consts: [[1, "content"], ["fxLayout", "row wrap", 1, "main-team"], ["class", "unit-container", 4, "ngFor", "ngForOf"], ["fxLayout", "row wrap", 1, ""], [1, "team-totals"], [1, "team-total-item"], [1, "team-total-item-desc"], [1, "team-total-item-value"], [1, "battle-timer-container"], [1, "card-title"], [3, "invert", "max", "min", "step", "tickInterval", "ngModel", "ngModelChange"], [1, "unit-container"], [3, "unit", "teamEffects", "unitClick"], [3, "unit", "unitClick"]],
+        decls: 14,
+        vars: 10,
+        consts: [[1, "content"], ["fxLayout", "row wrap", 1, "main-team"], ["class", "unit-container", 4, "ngFor", "ngForOf"], ["fxLayout", "row wrap", 1, ""], [1, "battle-timer-container"], [1, "card-header"], [1, "card-title"], [3, "invert", "max", "min", "step", "tickInterval", "ngModel", "ngModelChange", "input"], [1, "unit-container"], [3, "unit", "teamEffects", "battleTimer", "unitClick"]],
         template: function TeamBuilderComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -3963,13 +7029,15 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, TeamBuilderComponent_div_3_Template, 2, 2, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, TeamBuilderComponent_div_3_Template, 2, 3, "div", 2);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, TeamBuilderComponent_div_5_Template, 2, 1, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, TeamBuilderComponent_div_5_Template, 2, 3, "div", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "mat-card", 4);
 
@@ -3977,13 +7045,13 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "span", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "h2", 6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Cost");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "span", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "h2", 6);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12);
 
@@ -3991,26 +7059,12 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "mat-slider", 7);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "mat-card", 8);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "mat-card-content");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "h2", 9);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Battle Timer");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "mat-slider", 10);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function TeamBuilderComponent_Template_mat_slider_ngModelChange_17_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function TeamBuilderComponent_Template_mat_slider_ngModelChange_13_listener($event) {
               return ctx.battleTimer = $event;
+            })("input", function TeamBuilderComponent_Template_mat_slider_input_13_listener($event) {
+              return ctx.battleTimerChange($event);
             });
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -4033,17 +7087,21 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.subTeam);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.totals.cost);
-
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("invert", true)("max", ctx.battleTime)("min", 0)("step", 1)("tickInterval", 10)("ngModel", ctx.battleTimer);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Battle Timer: ", ctx.battleTimer, "");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Ellapsed Time: ", ctx.initialBattleTime - ctx.battleTimer, "");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("invert", true)("max", ctx.initialBattleTime)("min", 0)("step", 1)("tickInterval", 10)("ngModel", ctx.battleTimer);
           }
         },
         directives: [_angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_6__["DefaultLayoutDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"], _angular_material_card__WEBPACK_IMPORTED_MODULE_8__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_8__["MatCardContent"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_9__["MatSlider"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgModel"], _components_unit_card_unit_card_component__WEBPACK_IMPORTED_MODULE_11__["UnitCardComponent"]],
-        styles: [".content[_ngcontent-%COMP%] {\r\n  display: flex;\r\n  height: 100%;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\n.team-totals[_ngcontent-%COMP%] {\r\n  width: 125px;\r\n}\r\n\r\n.team-total-item[_ngcontent-%COMP%] {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.battle-timer-container[_ngcontent-%COMP%] {\r\n  margin-top: 10px;\r\n}\r\n\r\n.battle-timer-container[_ngcontent-%COMP%]   .mat-slider[_ngcontent-%COMP%] {\r\n  width: 100%;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhbS1idWlsZGVyL3BhZ2VzL3RlYW0tYnVpbGRlci90ZWFtLWJ1aWxkZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQWE7RUFDYixZQUFZO0VBQ1osbUJBQW1CO0VBQ25CLHVCQUF1QjtBQUN6Qjs7QUFFQTtFQUNFLFlBQVk7QUFDZDs7QUFFQTtFQUNFLGFBQWE7RUFDYiw4QkFBOEI7QUFDaEM7O0FBRUE7RUFDRSxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxXQUFXO0FBQ2IiLCJmaWxlIjoic3JjL2FwcC90ZWFtLWJ1aWxkZXIvcGFnZXMvdGVhbS1idWlsZGVyL3RlYW0tYnVpbGRlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRlbnQge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbn1cclxuXHJcbi50ZWFtLXRvdGFscyB7XHJcbiAgd2lkdGg6IDEyNXB4O1xyXG59XHJcblxyXG4udGVhbS10b3RhbC1pdGVtIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxufVxyXG5cclxuLmJhdHRsZS10aW1lci1jb250YWluZXIge1xyXG4gIG1hcmdpbi10b3A6IDEwcHg7XHJcbn1cclxuXHJcbi5iYXR0bGUtdGltZXItY29udGFpbmVyIC5tYXQtc2xpZGVyIHtcclxuICB3aWR0aDogMTAwJTtcclxufSJdfQ== */"]
+        styles: [".content[_ngcontent-%COMP%] {\r\n  display: flex;\r\n  height: 100%;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\n.team-totals[_ngcontent-%COMP%] {\r\n  width: 125px;\r\n}\r\n\r\n.team-total-item[_ngcontent-%COMP%], .card-header[_ngcontent-%COMP%] {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.battle-timer-container[_ngcontent-%COMP%] {\r\n  margin-top: 10px;\r\n}\r\n\r\n.battle-timer-container[_ngcontent-%COMP%]   .mat-slider[_ngcontent-%COMP%] {\r\n  width: 100%;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVhbS1idWlsZGVyL3BhZ2VzL3RlYW0tYnVpbGRlci90ZWFtLWJ1aWxkZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQWE7RUFDYixZQUFZO0VBQ1osbUJBQW1CO0VBQ25CLHVCQUF1QjtBQUN6Qjs7QUFFQTtFQUNFLFlBQVk7QUFDZDs7QUFFQTs7RUFFRSxhQUFhO0VBQ2IsOEJBQThCO0FBQ2hDOztBQUVBO0VBQ0UsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsV0FBVztBQUNiIiwiZmlsZSI6InNyYy9hcHAvdGVhbS1idWlsZGVyL3BhZ2VzL3RlYW0tYnVpbGRlci90ZWFtLWJ1aWxkZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250ZW50IHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcblxyXG4udGVhbS10b3RhbHMge1xyXG4gIHdpZHRoOiAxMjVweDtcclxufVxyXG5cclxuLnRlYW0tdG90YWwtaXRlbSxcclxuLmNhcmQtaGVhZGVyIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxufVxyXG5cclxuLmJhdHRsZS10aW1lci1jb250YWluZXIge1xyXG4gIG1hcmdpbi10b3A6IDEwcHg7XHJcbn1cclxuXHJcbi5iYXR0bGUtdGltZXItY29udGFpbmVyIC5tYXQtc2xpZGVyIHtcclxuICB3aWR0aDogMTAwJTtcclxufSJdfQ== */"]
       });
       /*@__PURE__*/
 
@@ -4574,14 +7632,14 @@
            * @param tiles Tiles to be positioned.
            */
           value: function update(numColumns, tiles) {
-            var _this10 = this;
+            var _this17 = this;
 
             this.columnIndex = 0;
             this.rowIndex = 0;
             this.tracker = new Array(numColumns);
             this.tracker.fill(0, 0, this.tracker.length);
             this.positions = tiles.map(function (tile) {
-              return _this10._trackTile(tile);
+              return _this17._trackTile(tile);
             });
           }
           /** Calculates the row and col position of a tile. */
@@ -4888,13 +7946,13 @@
         var _super4 = _createSuper(FixedTileStyler);
 
         function FixedTileStyler(fixedRowHeight) {
-          var _this11;
+          var _this18;
 
           _classCallCheck(this, FixedTileStyler);
 
-          _this11 = _super4.call(this);
-          _this11.fixedRowHeight = fixedRowHeight;
-          return _this11;
+          _this18 = _super4.call(this);
+          _this18.fixedRowHeight = fixedRowHeight;
+          return _this18;
         }
 
         _createClass(FixedTileStyler, [{
@@ -4950,15 +8008,15 @@
         var _super5 = _createSuper(RatioTileStyler);
 
         function RatioTileStyler(value) {
-          var _this12;
+          var _this19;
 
           _classCallCheck(this, RatioTileStyler);
 
-          _this12 = _super5.call(this);
+          _this19 = _super5.call(this);
 
-          _this12._parseRatio(value);
+          _this19._parseRatio(value);
 
-          return _this12;
+          return _this19;
         }
 
         _createClass(RatioTileStyler, [{
@@ -5149,7 +8207,7 @@
         }, {
           key: "_layoutTiles",
           value: function _layoutTiles() {
-            var _this13 = this;
+            var _this20 = this;
 
             if (!this._tileCoordinator) {
               this._tileCoordinator = new TileCoordinator();
@@ -5158,7 +8216,7 @@
             var tracker = this._tileCoordinator;
 
             var tiles = this._tiles.filter(function (tile) {
-              return !tile._gridList || tile._gridList === _this13;
+              return !tile._gridList || tile._gridList === _this20;
             });
 
             var direction = this._dir ? this._dir.value : 'ltr';
@@ -5170,7 +8228,7 @@
             tiles.forEach(function (tile, index) {
               var pos = tracker.positions[index];
 
-              _this13._tileStyler.setStyle(tile, pos.row, pos.col);
+              _this20._tileStyler.setStyle(tile, pos.row, pos.col);
             });
 
             this._setListStyle(this._tileStyler.getComputedHeight());
