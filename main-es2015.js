@@ -407,6 +407,52 @@ EffectPipe.ɵpipe = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefinePipe"]
 
 /***/ }),
 
+/***/ "N48R":
+/*!**********************************************!*\
+  !*** ./src/app/shared/pipes/pattern.pipe.ts ***!
+  \**********************************************/
+/*! exports provided: PatternPipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PatternPipe", function() { return PatternPipe; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+class PatternPipe {
+    transform(value, ...args) {
+        if (!value || !value.length) {
+            return '';
+        }
+        return value.map(pattern => `<li>${this.getPatternString(pattern)}</li>`).join('');
+    }
+    getPatternString(pattern) {
+        switch (pattern.action) {
+            case 'attack':
+                const attackPattern = pattern;
+                return `Attack (${attackPattern.type})`;
+            case 'heal':
+                const healPattern = pattern;
+                return `Level ${healPattern.level} heal (${healPattern.area})`;
+            default:
+                console.error('unexpected pattern.action on pattern', pattern);
+                return '';
+        }
+    }
+}
+PatternPipe.ɵfac = function PatternPipe_Factory(t) { return new (t || PatternPipe)(); };
+PatternPipe.ɵpipe = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({ name: "pattern", type: PatternPipe, pure: true });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PatternPipe, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"],
+        args: [{
+                name: 'pattern'
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
 /***/ "P+y/":
 /*!***********************************************!*\
   !*** ./src/app/shared/pipes/decorate.pipe.ts ***!
@@ -475,6 +521,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/button-toggle */ "jaxi");
 /* harmony import */ var _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/type-picker/type-picker.component */ "wpUN");
 /* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/button */ "bTqV");
+/* harmony import */ var _pipes_pattern_pipe__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pipes/pattern.pipe */ "N48R");
+
 
 
 
@@ -520,7 +568,8 @@ SharedModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjec
         _pipes_truncate_pipe__WEBPACK_IMPORTED_MODULE_8__["TruncatePipe"],
         _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"],
         _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"],
-        _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+        _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"],
+        _pipes_pattern_pipe__WEBPACK_IMPORTED_MODULE_17__["PatternPipe"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
         _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"],
         _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"],
@@ -542,7 +591,8 @@ SharedModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjec
         _pipes_truncate_pipe__WEBPACK_IMPORTED_MODULE_8__["TruncatePipe"],
         _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"],
         _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"],
-        _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"]] }); })();
+        _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"],
+        _pipes_pattern_pipe__WEBPACK_IMPORTED_MODULE_17__["PatternPipe"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SharedModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
@@ -555,6 +605,7 @@ SharedModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjec
                     _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"],
                     _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"],
                     _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"],
+                    _pipes_pattern_pipe__WEBPACK_IMPORTED_MODULE_17__["PatternPipe"],
                 ],
                 imports: [
                     _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
@@ -583,6 +634,7 @@ SharedModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjec
                     _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"],
                     _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"],
                     _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"],
+                    _pipes_pattern_pipe__WEBPACK_IMPORTED_MODULE_17__["PatternPipe"],
                 ]
             }]
     }], null, null); })();

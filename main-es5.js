@@ -713,6 +713,95 @@
     },
 
     /***/
+    "N48R":
+    /*!**********************************************!*\
+      !*** ./src/app/shared/pipes/pattern.pipe.ts ***!
+      \**********************************************/
+
+    /*! exports provided: PatternPipe */
+
+    /***/
+    function N48R(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "PatternPipe", function () {
+        return PatternPipe;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+
+      var PatternPipe = /*#__PURE__*/function () {
+        function PatternPipe() {
+          _classCallCheck(this, PatternPipe);
+        }
+
+        _createClass(PatternPipe, [{
+          key: "transform",
+          value: function transform(value) {
+            var _this2 = this;
+
+            if (!value || !value.length) {
+              return '';
+            }
+
+            return value.map(function (pattern) {
+              return "<li>".concat(_this2.getPatternString(pattern), "</li>");
+            }).join('');
+          }
+        }, {
+          key: "getPatternString",
+          value: function getPatternString(pattern) {
+            switch (pattern.action) {
+              case 'attack':
+                var attackPattern = pattern;
+                return "Attack (".concat(attackPattern.type, ")");
+
+              case 'heal':
+                var healPattern = pattern;
+                return "Level ".concat(healPattern.level, " heal (").concat(healPattern.area, ")");
+
+              default:
+                console.error('unexpected pattern.action on pattern', pattern);
+                return '';
+            }
+          }
+        }]);
+
+        return PatternPipe;
+      }();
+
+      PatternPipe.ɵfac = function PatternPipe_Factory(t) {
+        return new (t || PatternPipe)();
+      };
+
+      PatternPipe.ɵpipe = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({
+        name: "pattern",
+        type: PatternPipe,
+        pure: true
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PatternPipe, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"],
+          args: [{
+            name: 'pattern'
+          }]
+        }], null, null);
+      })();
+      /***/
+
+    },
+
+    /***/
     "P+y/":
     /*!***********************************************!*\
       !*** ./src/app/shared/pipes/decorate.pipe.ts ***!
@@ -906,6 +995,12 @@
       var _angular_material_button__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
       /*! @angular/material/button */
       "bTqV");
+      /* harmony import */
+
+
+      var _pipes_pattern_pipe__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
+      /*! ./pipes/pattern.pipe */
+      "N48R");
 
       var SharedModule = function SharedModule() {
         _classCallCheck(this, SharedModule);
@@ -923,9 +1018,9 @@
 
       (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](SharedModule, {
-          declarations: [_components_changelog_changelog_component__WEBPACK_IMPORTED_MODULE_7__["ChangelogComponent"], _pipes_decorate_pipe__WEBPACK_IMPORTED_MODULE_4__["DecoratePipe"], _pipes_effect_pipe__WEBPACK_IMPORTED_MODULE_5__["EffectPipe"], _pipes_marked_pipe__WEBPACK_IMPORTED_MODULE_6__["MarkedPipe"], _pipes_truncate_pipe__WEBPACK_IMPORTED_MODULE_8__["TruncatePipe"], _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"], _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"], _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"]],
+          declarations: [_components_changelog_changelog_component__WEBPACK_IMPORTED_MODULE_7__["ChangelogComponent"], _pipes_decorate_pipe__WEBPACK_IMPORTED_MODULE_4__["DecoratePipe"], _pipes_effect_pipe__WEBPACK_IMPORTED_MODULE_5__["EffectPipe"], _pipes_marked_pipe__WEBPACK_IMPORTED_MODULE_6__["MarkedPipe"], _pipes_truncate_pipe__WEBPACK_IMPORTED_MODULE_8__["TruncatePipe"], _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"], _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"], _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"], _pipes_pattern_pipe__WEBPACK_IMPORTED_MODULE_17__["PatternPipe"]],
           imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_16__["MatButtonModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"]],
-          exports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_16__["MatButtonModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"], _components_changelog_changelog_component__WEBPACK_IMPORTED_MODULE_7__["ChangelogComponent"], _pipes_decorate_pipe__WEBPACK_IMPORTED_MODULE_4__["DecoratePipe"], _pipes_effect_pipe__WEBPACK_IMPORTED_MODULE_5__["EffectPipe"], _pipes_marked_pipe__WEBPACK_IMPORTED_MODULE_6__["MarkedPipe"], _pipes_truncate_pipe__WEBPACK_IMPORTED_MODULE_8__["TruncatePipe"], _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"], _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"], _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"]]
+          exports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_16__["MatButtonModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"], _components_changelog_changelog_component__WEBPACK_IMPORTED_MODULE_7__["ChangelogComponent"], _pipes_decorate_pipe__WEBPACK_IMPORTED_MODULE_4__["DecoratePipe"], _pipes_effect_pipe__WEBPACK_IMPORTED_MODULE_5__["EffectPipe"], _pipes_marked_pipe__WEBPACK_IMPORTED_MODULE_6__["MarkedPipe"], _pipes_truncate_pipe__WEBPACK_IMPORTED_MODULE_8__["TruncatePipe"], _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"], _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"], _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"], _pipes_pattern_pipe__WEBPACK_IMPORTED_MODULE_17__["PatternPipe"]]
         });
       })();
       /*@__PURE__*/
@@ -935,9 +1030,9 @@
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SharedModule, [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
           args: [{
-            declarations: [_components_changelog_changelog_component__WEBPACK_IMPORTED_MODULE_7__["ChangelogComponent"], _pipes_decorate_pipe__WEBPACK_IMPORTED_MODULE_4__["DecoratePipe"], _pipes_effect_pipe__WEBPACK_IMPORTED_MODULE_5__["EffectPipe"], _pipes_marked_pipe__WEBPACK_IMPORTED_MODULE_6__["MarkedPipe"], _pipes_truncate_pipe__WEBPACK_IMPORTED_MODULE_8__["TruncatePipe"], _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"], _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"], _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"]],
+            declarations: [_components_changelog_changelog_component__WEBPACK_IMPORTED_MODULE_7__["ChangelogComponent"], _pipes_decorate_pipe__WEBPACK_IMPORTED_MODULE_4__["DecoratePipe"], _pipes_effect_pipe__WEBPACK_IMPORTED_MODULE_5__["EffectPipe"], _pipes_marked_pipe__WEBPACK_IMPORTED_MODULE_6__["MarkedPipe"], _pipes_truncate_pipe__WEBPACK_IMPORTED_MODULE_8__["TruncatePipe"], _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"], _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"], _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"], _pipes_pattern_pipe__WEBPACK_IMPORTED_MODULE_17__["PatternPipe"]],
             imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_16__["MatButtonModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"]],
-            exports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_16__["MatButtonModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"], _components_changelog_changelog_component__WEBPACK_IMPORTED_MODULE_7__["ChangelogComponent"], _pipes_decorate_pipe__WEBPACK_IMPORTED_MODULE_4__["DecoratePipe"], _pipes_effect_pipe__WEBPACK_IMPORTED_MODULE_5__["EffectPipe"], _pipes_marked_pipe__WEBPACK_IMPORTED_MODULE_6__["MarkedPipe"], _pipes_truncate_pipe__WEBPACK_IMPORTED_MODULE_8__["TruncatePipe"], _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"], _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"], _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"]]
+            exports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_3__["FlexLayoutModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_9__["MatExpansionModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_11__["MatDialogModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_16__["MatButtonModule"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"], _components_changelog_changelog_component__WEBPACK_IMPORTED_MODULE_7__["ChangelogComponent"], _pipes_decorate_pipe__WEBPACK_IMPORTED_MODULE_4__["DecoratePipe"], _pipes_effect_pipe__WEBPACK_IMPORTED_MODULE_5__["EffectPipe"], _pipes_marked_pipe__WEBPACK_IMPORTED_MODULE_6__["MarkedPipe"], _pipes_truncate_pipe__WEBPACK_IMPORTED_MODULE_8__["TruncatePipe"], _pipes_unit_filter_pipe__WEBPACK_IMPORTED_MODULE_12__["UnitFilterPipe"], _components_class_picker_class_picker_component__WEBPACK_IMPORTED_MODULE_13__["ClassPickerComponent"], _components_type_picker_type_picker_component__WEBPACK_IMPORTED_MODULE_15__["TypePickerComponent"], _pipes_pattern_pipe__WEBPACK_IMPORTED_MODULE_17__["PatternPipe"]]
           }]
         }], null, null);
       })();
